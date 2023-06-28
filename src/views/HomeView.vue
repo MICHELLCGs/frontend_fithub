@@ -36,6 +36,7 @@
                         class="img-fluid"
                         alt=""
                       />
+                      
                     </div>
                     <form>
                       <label for="imagen-perfil" class="input-label">
@@ -46,7 +47,9 @@
                           accept="image/*"
                           class="file-input"
                         />
+                        <button class="boton-editar" type="submit">Guardar</button>
                       </label>
+                      
                     </form>
                   </div>
                   <div
@@ -77,7 +80,7 @@
                       </div>
                     </div>
                     <a href="/editar"><button class="boton-editar">Editar</button></a>
-                    <button class="boton-editar" type="submit">Guardar</button>
+                    
                   </div>
                 </div>
               </div>
@@ -192,7 +195,7 @@ export default {
 .label-text {
   background-color: #1d648d;
   color: white;
-  padding: 10px 20px;
+  padding: 9px 10px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
