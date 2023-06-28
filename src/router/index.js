@@ -17,6 +17,11 @@ const routes = [
     name: "register",
     component: () => import("@/components/RegisterComp.vue"),
   },
+  {
+    path: "/compra",
+    name: "compta",
+    component: () => import("@/views/CompraView.vue"),
+  }
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

@@ -2,8 +2,7 @@
     <body>
         <HeaderComp />
         <main>
-
-            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" ref="carousel">
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -217,11 +216,6 @@ import HeaderComp from '@/components/HeaderComp.vue';
 export default {
     components() {
         HeaderComp;
-    },
-    mounted() {
-        // Inicializar el carrusel
-        const carouselElement = this.$refs.carousel;
-        new bootstrap.Carousel(carouselElement);
     },
     components: { HeaderComp }
 };
