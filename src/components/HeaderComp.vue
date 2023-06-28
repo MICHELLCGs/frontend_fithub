@@ -1,7 +1,7 @@
 <template>
   <header class="topheader">
     <nav class="topnav">
-      <a href="#" class="logo">
+      <a href="/" class="logo">
         <img
           height="45"
           width="135"
@@ -10,17 +10,16 @@
         />
       </a>
       <ul class="menu">
-        <li><a href="#mapa" class="selected">Mapa</a></li>
+        <li><a href="#mapa" >Mapa</a></li>
         <li><a href="login">Log In</a></li>
-        <li><a href="#register">Register</a></li>
+        <li><a href="register">Register</a></li>
       </ul>
     </nav>
   </header>
 </template>
 <script>
 export default {
-  name: "Header",
-};
+  name: "Header"}
 </script>
 <style>
  @import "@/assets/css/navbar.css";

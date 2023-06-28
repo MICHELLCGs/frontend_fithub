@@ -9,7 +9,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-
+    <HeaderComp />
     <div
       class="container d-flex justify-content-center align-items-center min-vh-100"
     >
@@ -113,7 +113,17 @@
     </div>
 
 </template>
+<script>
+import HeaderComp from '@/components/HeaderComp.vue';
+export default {
+    components() {
+        HeaderComp;
+    },
+    components: { HeaderComp }
+};
+</script>
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 body {
   font-family: "Poppins", sans-serif;
@@ -138,7 +148,7 @@ body {
   border-radius: 30px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 40px) {
   .box-area {
     margin: 0 10px;
   }
