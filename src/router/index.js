@@ -18,10 +18,16 @@ const routes = [
     component: () => import("@/components/RegisterComp.vue"),
   },
   {
+
     path: "/compra",
-    name: "compta",
+    name: "compra",
     component: () => import("@/views/CompraView.vue"),
-  }
+  },
+  {
+    path: "/home",
+    name: "home",
+    component: () => import("@/views/HomeView.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
