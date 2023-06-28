@@ -140,7 +140,7 @@ body {
 }
 
 
-@media only screen and (max-width: 4*0px) {
+@media only screen and (max-width: 40em) {
 
 
   .box-area {
