@@ -2,8 +2,7 @@
     <body>
         <HeaderComp />
         <main>
-
-            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" ref="carousel">
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -203,10 +202,9 @@
 
             <!-- FOOTER -->
             <footer class="container">
-                <p class="float-end"><a href="#">Back to top</a></p>
                 <p>
-                    &copy; 2017–2022 Company, Inc. &middot;
-                    <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+                    &copy; 2023, FitHub &middot;
+                    <a href="#">Documentación</a> &middot; <a href="#">Repositorio</a>
                 </p>
             </footer>
         </main>
@@ -217,11 +215,6 @@ import HeaderComp from '@/components/HeaderComp.vue';
 export default {
     components() {
         HeaderComp;
-    },
-    mounted() {
-        // Inicializar el carrusel
-        const carouselElement = this.$refs.carousel;
-        new bootstrap.Carousel(carouselElement);
     },
     components: { HeaderComp }
 };

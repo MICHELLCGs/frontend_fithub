@@ -148,7 +148,7 @@ body {
   border-radius: 30px;
 }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 40px) {
   .box-area {
     margin: 0 10px;
   }
