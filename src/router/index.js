@@ -33,6 +33,11 @@ const routes = [
     name: "home",
     component: () => import("@/views/HomeView.vue"),
   },
+  {
+    path: "/editar",
+    name: "editar",
+    component: () => import("@/components/EditarComp.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

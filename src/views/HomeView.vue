@@ -47,53 +47,36 @@
                           class="file-input"
                         />
                       </label>
-                    
                     </form>
                   </div>
                   <div
                     class="col-lg-8 pt-4 pt-lg-0 content"
                     data-aos="fade-left"
                   >
-                    <h3>Michell Sabrina</h3>
+                    <h3>Michell Sabrina Condori</h3>
 
                     <div class="row">
                       <div class="col-lg-6">
                         <ul>
-                          <li>
+                          <ul>
                             <i class="bi bi-chevron-right"></i>
-                            <strong>F. NACIMIENTO:</strong>
-                            <span>1 May 1995</span>
-                          </li>
-                          <li>
-                            <i class="bi bi-chevron-right"></i>
-                            <strong>NUMERO:</strong> <span>+123 456 7890</span>
-                          </li>
-                          <li>
-                            <i class="bi bi-chevron-right"></i>
-                            <strong>CIUDAD:</strong> <span>New York, USA</span>
-                          </li>
+                            <strong>DNI: </strong>
+                            <span>724569813</span>
+                          </ul>
                         </ul>
                       </div>
                       <div class="col-lg-6">
                         <ul>
-                          <li>
+                          <ul>
                             <i class="bi bi-chevron-right"></i>
-                            <strong>EDAD:</strong> <span>18</span>
-                          </li>
-                          <li>
-                            <i class="bi bi-chevron-right"></i>
-                            <strong>EMAIL:</strong>
-                            <span>email@example.com</span>
-                          </li>
-                          <li>
-                            <i class="bi bi-chevron-right"></i>
-                            <strong>PLAN ADQUIRIDO:</strong>
-                            <span>FitPlan</span>
-                          </li>
+                            <strong>CORREO ELECTRONICO: </strong>
+                            <span>michellsabrinac@gmail.com</span>
+                          </ul>
+                          
                         </ul>
                       </div>
                     </div>
-                    <button class="boton-editar">Editar</button>
+                    <a href="/editar"><button class="boton-editar">Editar</button></a>
                     <button class="boton-editar" type="submit">Guardar</button>
                   </div>
                 </div>
@@ -111,6 +94,11 @@
                     Aqui podras enterarte sobre los dias restantes del uso de tu
                     plan.
                   </p>
+                  <ul>
+                    <i class="bi bi-chevron-right"></i>
+                    <strong>PLAN ADQUIRIDO: </strong>
+                    <span>FitPlan</span>
+                  </ul>
                 </div>
 
                 <div class="row no-gutters">
@@ -207,7 +195,6 @@ export default {
   padding: 10px 20px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
-  
 }
 
 .label-text:hover {
