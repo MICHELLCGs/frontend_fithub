@@ -22,6 +22,11 @@ const routes = [
     name: "register",
     component: () => import("@/components/RegisterComp.vue"),
   },
+  {
+    path: "/home",
+    name: "home",
+    component: () => import("@/views/HomeView.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
