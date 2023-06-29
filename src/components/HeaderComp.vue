@@ -6,7 +6,9 @@
       </a>
       <ul class="nav nav-masthead justify-content-end nav-separator">
         <li class="nav-item">
-          <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Iniciar sesión</a>
+          <router-link :to="{ name:''}">
+            <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Iniciar sesión</a>
+          </router-link>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-bold py-1 px-0" href="#">Registrarse</a>
@@ -17,7 +19,8 @@
 </template>
 <script>
 export default {
-  name: "Header"}
+  name: "Header"
+  }
 </script>
 <style>
 @import "@/assets/css/navbar.css";
