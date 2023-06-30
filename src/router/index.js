@@ -32,12 +32,17 @@ const routes = [
   {
     path: "/home",
     name: "home",
-    component: () => import("@/views/Auth/Customer/HomeCustomer.vue"),
+    component: () => import("@/views/HomeView.vue"),
   },
   {
-    path: "/editar",
-    name: "editar",
-    component: () => import("@/components/EditarComp.vue"),
+    path: "/perfil",
+    name: "perfil",
+    component: () => import("@/views/PerfilHome.vue"),
+  },
+  {
+    path: "/uasistencia",
+    name: "uasistencia",
+    component: () => import("@/views/Uasistencia.vue"),
   },
   {
     path: "/homeadmin",
