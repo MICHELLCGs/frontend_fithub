@@ -146,9 +146,7 @@
                         <p class="lead">Encuentra gimansios cerca de ti.</p>
                     </div>
                     <div class="col-md-12">
-                        <iframe src="https://my.atlist.com/map/dbad2170-9162-4bf5-9733-b6320dfb291d?share=true"
-                            allow="geolocation 'self' https://my.atlist.com" width="100%" height="540px" frameborder="0"
-                            scrolling="no" allowfullscreen></iframe>
+                        <iframe src="https://my.atlist.com/map/73f9ee8c-36c6-4f5f-88ff-8be30f81279d?share=true" allow="geolocation 'self' https://my.atlist.com" width="100%" height="400px" frameborder="0" scrolling="no" allowfullscreen></iframe>
                     </div>
                 </div>
 
