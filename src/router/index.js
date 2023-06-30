@@ -6,6 +6,7 @@ const routes = [
     path: "/",
     name: "index",
     component: IndexView,
+
   },
   {
     path: "/admin",
@@ -31,13 +32,19 @@ const routes = [
   {
     path: "/home",
     name: "home",
-    component: () => import("@/views/HomeView.vue"),
+    component: () => import("@/views/Auth/Customer/HomeCustomer.vue"),
   },
   {
     path: "/editar",
     name: "editar",
     component: () => import("@/components/EditarComp.vue"),
   },
+  {
+    path: "/homeadmin",
+    name: "homeadmin",
+    component: () => import("@/views/Auth/Admin/HomeAdmin.vue"),
+  },
+  //{ path: "*", component: PageNotFound },
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

@@ -31,7 +31,7 @@
                   <div class="col-lg-4" data-aos="fade-right">
                     <div class="image-container">
                       <img
-                        src="../assets/img/userimg.png"
+                        src="@/assets/img/userimg.png"
                         width="220"
                         class="img-fluid"
                         alt=""
@@ -158,7 +158,7 @@ export default {
 </script>
 <style>
 .fondo {
-  background-image: url("../assets/img/gymhome.png");
+  background-image: url("@/assets/img/gymhome.png");
   background-size: cover;
 }
 .boton-editar {
