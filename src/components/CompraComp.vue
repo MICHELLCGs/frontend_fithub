@@ -58,6 +58,9 @@
 
     </div>
 </template>
+<script>
+
+</script>
 
 <style>
 .blog-pagination {

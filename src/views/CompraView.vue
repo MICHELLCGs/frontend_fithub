@@ -42,9 +42,11 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <button class="btn w-100 mt-2 text-white" style="background-color: #474d89">
-                            Continuar
-                        </button>
+                        <router-link :to="{ name: 'pay' }">
+                            <button class="btn w-100 mt-2 text-white" style="background-color: #474d89">
+                                Continuar
+                            </button>
+                        </router-link>
                     </div>
                 </div>
             </div>
