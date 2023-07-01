@@ -2,7 +2,7 @@
     <body>
         <HeaderComp />
         <main>
-            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="margin-top: 60px;">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -189,7 +189,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a class="custom-button" href="#">¡Ordena ya!</a>
+                                <a class="custom-button" href="/compra">¡Ordena ya!</a>
                             </div>
                         </div>
                     </div>
@@ -228,12 +228,6 @@ export default {
 /* Padding below the footer and lighter body text */
 * {
     font-family: "Poppins", sans-serif;
-}
-
-body {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    color: #5a5a5a;
 }
 
 /* CUSTOMIZE THE CAROUSEL
