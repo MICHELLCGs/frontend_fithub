@@ -1,231 +1,84 @@
 <template>
-  <body>
-    <HeaderComp />
-    <main>
-      <div>
-        <div>
-          <div class="col-md-15">
-            <div>
-              <ul class="fondo">
-                <div id="fondo" class="col-md-4 p-lg-5 mx-auto my-0">
-                  <h1 class="display-2 fw-bold" style="color: white">
-                    BIENVENIDO
-                  </h1>
-                  <h3 style="color: white">
-                    FitHub Mejora la Calidad de tu Vida
-                  </h3>
-                </div>
-              </ul>
+    <body>
+      <SidebarHome />
+      <main>
+        <div class="contenido">
+          <!-- ======= Hero Section ======= -->
+          <section
+            id="hero"
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="hero-container" data-aos="fade-in">
+              <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Bienvenido</h1>
             </div>
-            <!-- ======= About Section ======= -->
-            <section id="about" class="about">
-              <div class="container">
-                <div class="section-title">
-                  <h2 :style="{ color: textColor }">
-                    <strong>TU INFORMACION</strong>
-                  </h2>
-                  <p>Aqui puedes editar y actualizar tu información.</p>
-                </div>
-
-                <div class="row">
-                  <div class="col-lg-4" data-aos="fade-right">
-                    <div class="image-container">
-                      <img
-                        src="../assets/img/userimg.png"
-                        width="220"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <form>
-                      <label for="imagen-perfil" class="input-label">
-                        <span class="label-text">Seleccionar archivo</span>
-                        <input
-                          type="file"
-                          id="imagen-perfil"
-                          accept="image/*"
-                          class="file-input"
-                        />
-                      </label>
-                    
-                    </form>
-                  </div>
-                  <div
-                    class="col-lg-8 pt-4 pt-lg-0 content"
-                    data-aos="fade-left"
-                  >
-                    <h3>Michell Sabrina</h3>
-
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <ul>
-                          <li>
-                            <i class="bi bi-chevron-right"></i>
-                            <strong>F. NACIMIENTO:</strong>
-                            <span>1 May 1995</span>
-                          </li>
-                          <li>
-                            <i class="bi bi-chevron-right"></i>
-                            <strong>NUMERO:</strong> <span>+123 456 7890</span>
-                          </li>
-                          <li>
-                            <i class="bi bi-chevron-right"></i>
-                            <strong>CIUDAD:</strong> <span>New York, USA</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="col-lg-6">
-                        <ul>
-                          <li>
-                            <i class="bi bi-chevron-right"></i>
-                            <strong>EDAD:</strong> <span>18</span>
-                          </li>
-                          <li>
-                            <i class="bi bi-chevron-right"></i>
-                            <strong>EMAIL:</strong>
-                            <span>email@example.com</span>
-                          </li>
-                          <li>
-                            <i class="bi bi-chevron-right"></i>
-                            <strong>PLAN ADQUIRIDO:</strong>
-                            <span>FitPlan</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <button class="boton-editar">Editar</button>
-                    <button class="boton-editar" type="submit">Guardar</button>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- End About Section -->
-            <!-- ======= Plan Section ======= -->
-            <section id="facts" class="facts">
-              <div class="container">
-                <div class="section-title">
-                  <h2 :style="{ color: textColor }">
-                    <strong>INFORMACION SOBRE TU PLAN</strong>
-                  </h2>
-                  <p>
-                    Aqui podras enterarte sobre los dias restantes del uso de tu
-                    plan.
-                  </p>
-                </div>
-
-                <div class="row no-gutters">
-                  <div
-                    class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-                    data-aos="fade-up"
-                  >
-                    <div class="count-box">
-                      <i class="bi bi-emoji-smile" style="font-size: 50px"></i>
-                      <p style="font-size: 24px">
-                        <strong>18</strong> Días Asistidos
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch"
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                  >
-                    <div class="count-box">
-                      <i
-                        class="bi bi-journal-richtext"
-                        style="font-size: 50px"
-                      ></i>
-                      <p style="font-size: 24px">
-                        <strong>235</strong> Días para la Expiración de tu Plan
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- End Facts Section -->
-          </div>
+          </section>
+          <!-- End Hero -->
         </div>
-      </div>
-    </main>
-  </body>
-</template>
-<script>
-import HeaderComp from "@/components/HeaderComp.vue";
-export default {
-  components() {
-    HeaderComp;
-  },
-  components: { HeaderComp },
-  data() {
-    return {
-      textColor: "#89BACD", // Puedes cambiar el color aquí
-    };
-  },
-};
-</script>
-<style>
-.fondo {
-  background-image: url("../assets/img/gymhome.png");
-  background-size: cover;
-}
-.boton-editar {
-  background-color: #1d648d;
-  border: none;
-  color: white;
-  padding: 09px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-.input-label {
-  position: relative;
-  display: flex;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-}
-
-.file-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.label-text {
-  background-color: #1d648d;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+      </main>
+    </body>
+  </template>
+  <script>
+  import SidebarHome from "@/components/SidebarHome.vue";
+  export default {
+    components() {
+      SidebarHome;
+    },
+    components: { SidebarHome },
+  };
+  </script>
+  <style>
+  /*--------------------------------------------------------------
+  # Hero Section
+  --------------------------------------------------------------*/
+  #hero {
+    width: calc(100% - 250px); /* Resta el ancho del sidebar al ancho total */
+    height: 100vh;
+    margin-left: 250px; /* Ancho del sidebar */
+    background: url("../assets/img/home.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
-}
-
-.label-text:hover {
-  background-color: #45a049;
-}
-
-.file-input:focus + .label-text {
-  outline: 2px solid #4caf50;
-}
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 28vh; /* Ajusta la altura según tus necesidades */
-}
-
-.image-container img {
-  max-width: 100%;
-  max-height: 100%;
-}
-</style>
+  #hero .hero-container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  #hero h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .contenido {
+      margin-left: 0;
+    }
+  
+    #hero {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  body {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    color: #5a5a5a;
+  }
+  
+  </style>

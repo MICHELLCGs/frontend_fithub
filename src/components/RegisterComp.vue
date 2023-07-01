@@ -50,13 +50,13 @@
               <h1>Bienvenido</h1>
               <p>Registrate y conoce una vida saludable</p>
             </div>
-            <div class="input-group mb-3">
+            <!-- <div class="input-group mb-3">
               <input
                 type="text"
                 class="form-control form-control-lg bg-light fs-6"
                 placeholder="Nombre"
               />
-            </div>
+            </div> -->
             <div class="input-group mb-3">
               <input
                 type="text"

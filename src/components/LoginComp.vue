@@ -78,8 +78,8 @@
               >
             </div>
           </div>
-          <div class="input-group mb-3">
-            <button class="btn btn-lg btn-dark w-100 fs-6">Login</button>
+          <div ref="/home" class="input-group mb-3"> 
+            <button class="btn btn-lg btn-dark w-100 fs-6" >Login</button>
           </div>
           <div class="input-group mb-3">
             <!-- <button class="btn btn-lg btn-light w-100 fs-6">
