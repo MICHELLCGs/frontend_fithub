@@ -9,18 +9,16 @@
       <ul class="nav nav-masthead justify-content-end nav-separator">
         <li class="nav-item">
           <router-link :to="{ name: 'login' }">
-          <a :class="{'nav-link fw-bold py-1 px-0':true, active: isRouteActive('login'),}" aria-current="page" href="#">
-            <button class="btn btn-custom rounded-pill" style="font-size: 14px;">Iniciar sesión</button>
+          <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="#">
+            <button :class="{'btn btn-custom rounded-pill':true, selected: isRouteActive('login'),}" style="font-size: 14px;">Iniciar sesión</button>
           </a>
         </router-link>
 
         </li>
         <li class="nav-item">
           <router-link :to="{ name: 'register' }">
-          <a :class="{'nav-link fw-bold py-1 px-0': true,
-                active: isRouteActive('register'),
-              }" href="#">
-            <button class="btn btn-custom rounded-pill selected" style="font-size: 14px;">Registrarse</button>
+          <a class="nav-link fw-bold py-1 px-0"  href="#">
+            <button :class="{'btn btn-custom rounded-pill':true, selected: isRouteActive('register'),}" style="font-size: 14px;">Registrarse</button>
           </a>
         </router-link>
         </li>
