@@ -19,73 +19,55 @@
                 >
                   Search
                 </button>
-                
               </div>
-              <div class="elemento"> Elemento </div>
+              <div class="elemento">Elemento</div>
             </div>
           </form>
         </nav>
       </div>
     </div>
-<!-- aaaaaaaaaaaaaaaaaaaaaaaaaaa -->
-<div class="header">
-    <h1>Reliable, efficient delivery</h1>
-    <h1>Powered by Technology</h1>
+    <!-- aaaaaaaaaaaaaaaaaaaaaaaaaaa -->
 
-    <p>Our Artificial Intelligence powered tools use millions of project data points
-      to ensure that your project is successful</p>
-  </div>
-  <div class="row1-container">
-    <div class="box box-down cyan">
-      <h2>Supervisor</h2>
-      <p>Monitors activity to identify project roadblocks</p>
-      <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
-    </div>
-
-    <div class="box red">
-      <h2>Team Builder</h2>
-      <p>Scans our talent network to create the optimal team for your project</p>
-      <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
-    </div>
-
-    <div class="box box-down blue">
-      <h2>Calculator</h2>
-      <p>Uses data from past projects to provide better delivery estimates</p>
-      <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
-    </div>
-  </div>
-  <div class="row2-container">
-    <div class="box orange">
-      <h2>Karma</h2>
-      <p>Regularly evaluates our talent to ensure quality</p>
-      <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
-    </div>
-  </div>
-<!-- aaaaaaaaaaaaaaaaaaaaaaaaaaa -->
-    <div class="content">
-      <div class="cards">
-        <div class="card text-white bg-primary mb-1" style="max-width: 18rem">
-          <div class="card-header">Header</div>
-          <div class="card-body">
-            <h5 class="card-title">Primary card title</h5>
-            <p class="card-text">Hola</p>
-          </div>
-        </div>
-        <div class="card text-white bg-danger mb-3" style="max-width: 18rem">
-          <div class="card-header">Header</div>
-          <div class="card-body">
-            <h5 class="card-title">Primary card title</h5>
-            <p class="card-text">Hola</p>
-          </div>
-        </div>
-        <div class="card text-white bg-success mb-3" style="max-width: 18rem">
-          <div class="card-header">Header</div>
-          <div class="card-body">
-            <h5 class="card-title">Primary card title</h5>
-            <p class="card-text">Hola</p>
-          </div>
-        </div>
+    <div class="row1-container">
+      <div class="box box-down cyan">
+        <h2>Supervisor</h2>
+        <p>Monitors activity to identify project roadblocks</p>
+        <img
+          src="https://assets.codepen.io/2301174/icon-supervisor.svg"
+          alt=""
+        />
       </div>
+
+      <div class="box red">
+        <h2>Team Builder</h2>
+        <p>
+          Scans our talent network to create the optimal team for your project
+        </p>
+        <img
+          src="https://assets.codepen.io/2301174/icon-team-builder.svg"
+          alt=""
+        />
+      </div>
+
+      <div class="box box-down blue">
+        <h2>Calculator</h2>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <img
+          src="https://assets.codepen.io/2301174/icon-calculator.svg"
+          alt=""
+        />
+      </div>
+    </div>
+    <!-- <div class="row2-container">
+      <div class="box orange">
+        <h2>Karma</h2>
+        <p>Regularly evaluates our talent to ensure quality</p>
+        <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" />
+      </div>
+    </div> -->
+    <!-- aaaaaaaaaaaaaaaaaaaaaaaaaaa -->
+    <div class="content">
+      
     </div>
     <div class="content">
       <div class="tab">
@@ -95,53 +77,52 @@
               <div class="attendance-list">
                 <h1><center>Tabla Usuarios</center></h1>
                 <table class="table">
-  <thead >
-    <tr class="table-row">
-      <th scope="col">ID</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">DNI</th>
-      <th scope="col">Mail</th>
-      <th scope="col">etc</th>
-      <th scope="col">etc</th>
-      <th scope="col">Plan</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="table-row">
-      <td scope="col">01</td>
-      <td scope="col">Sam David</td>
-      <td scope="col">57659033</td>
-      <td scope="col">mail</td>
-      <td scope="col">8:00AM</td>
-      <td scope="col">3:00PM</td>
-    </tr>
-    <tr class="table-row">
-      <td scope="col">02</td>
-      <td scope="col">Balbina Kherr</td>
-      <td scope="col">45673489</td>
-      <td scope="col">mail</td>
-      <td scope="col">9:00AM</td>
-      <td scope="col">4:00PM</td>
-    </tr>
-    <tr class="table-row">
-      <td scope="col">03</td>
-      <td scope="col">Badan John</td>
-      <td scope="col">76459823</td>
-      <td scope="col">mail</td>
-      <td scope="col">8:00AM</td>
-      <td scope="col">3:00PM</td>
-    </tr>
-    <tr class="table-row">
-      <td scope="col">04</td>
-      <td scope="col">Sara David</td>
-      <td scope="col">34764987</td>
-      <td scope="col">mail</td>
-      <td scope="col">8:00AM</td>
-      <td scope="col">3:00PM</td>
-    </tr>
-  </tbody>
-</table>
-
+                  <thead>
+                    <tr class="table-row">
+                      <th scope="col">ID</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">DNI</th>
+                      <th scope="col">Mail</th>
+                      <th scope="col">etc</th>
+                      <th scope="col">etc</th>
+                      <th scope="col">Plan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="table-row">
+                      <td scope="col">01</td>
+                      <td scope="col">Sam David</td>
+                      <td scope="col">57659033</td>
+                      <td scope="col">mail</td>
+                      <td scope="col">8:00AM</td>
+                      <td scope="col">3:00PM</td>
+                    </tr>
+                    <tr class="table-row">
+                      <td scope="col">02</td>
+                      <td scope="col">Balbina Kherr</td>
+                      <td scope="col">45673489</td>
+                      <td scope="col">mail</td>
+                      <td scope="col">9:00AM</td>
+                      <td scope="col">4:00PM</td>
+                    </tr>
+                    <tr class="table-row">
+                      <td scope="col">03</td>
+                      <td scope="col">Badan John</td>
+                      <td scope="col">76459823</td>
+                      <td scope="col">mail</td>
+                      <td scope="col">8:00AM</td>
+                      <td scope="col">3:00PM</td>
+                    </tr>
+                    <tr class="table-row">
+                      <td scope="col">04</td>
+                      <td scope="col">Sara David</td>
+                      <td scope="col">34764987</td>
+                      <td scope="col">mail</td>
+                      <td scope="col">8:00AM</td>
+                      <td scope="col">3:00PM</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </section>
           </div>
@@ -198,33 +179,33 @@
                 <h1><center>tabla Pagos</center></h1>
                 <table class="table">
                   <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Nombre</th>
-                      <th>Ubicación</th>
-                      <th>Mail</th>
-                      <th>Foro</th>
-                      <th>etc</th>
-                      <th>Estado</th>
+                    <tr class="table-row">
+                      <th scope="col">ID</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Ubicación</th>
+                      <th scope="col">Mail</th>
+                      <th scope="col">Foro</th>
+                      <th scope="col">etc</th>
+                      <th scope="col">Estado</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>05</td>
-                      <td>Jane Smith</td>
-                      <td>12345678</td>
-                      <td>mail</td>
-                      <td>10:00AM</td>
-                      <td>5:00PM</td>
+                    <tr class="table-row">
+                      <td scope="col">05</td>
+                      <td scope="col">Jane Smith</td>
+                      <td scope="col">12345678</td>
+                      <td scope="col">mail</td>
+                      <td scope="col">10:00AM</td>
+                      <td scope="col">5:00PM</td>
                       <!-- <td><button>Activo</button></td> -->
                     </tr>
-                    <tr>
-                      <td>06</td>
-                      <td>John Doe</td>
-                      <td>87654321</td>
-                      <td>mail</td>
-                      <td>11:00AM</td>
-                      <td>6:00PM</td>
+                    <tr class="table-row">
+                      <td scope="col">06</td>
+                      <td scope="col">John Doe</td>
+                      <td scope="col">87654321</td>
+                      <td scope="col">mail</td>
+                      <td scope="col">11:00AM</td>
+                      <td scope="col">6:00PM</td>
                       <!-- <td><button>Activo</button></td> -->
                     </tr>
                     <!-- Agrega más filas si es necesario -->
@@ -241,33 +222,33 @@
                 <h1><center>tabla Partners</center></h1>
                 <table class="table">
                   <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Nombre</th>
-                      <th>dni</th>
-                      <th>Mail</th>
-                      <th>Etc</th>
-                      <th>etc</th>
-                      <th>Estado</th>
+                    <tr class="table-row">
+                      <th scope="col">ID</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">dni</th>
+                      <th scope="col">Mail</th>
+                      <th scope="col">Etc</th>
+                      <th scope="col">etc</th>
+                      <th scope="col">Estado</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>05</td>
-                      <td>Jane Smith</td>
-                      <td>12345678</td>
-                      <td>mail</td>
-                      <td>10:00AM</td>
-                      <td>5:00PM</td>
+                    <tr class="table-row">
+                      <td scope="col">05</td>
+                      <td scope="col">Jane Smith</td>
+                      <td scope="col">12345678</td>
+                      <td scope="col">mail</td>
+                      <td scope="col">10:00AM</td>
+                      <td scope="col">5:00PM</td>
                       <!-- <td><button>Activo</button></td> -->
                     </tr>
-                    <tr>
-                      <td>06</td>
-                      <td>John Doe</td>
-                      <td>87654321</td>
-                      <td>mail</td>
-                      <td>11:00AM</td>
-                      <td>6:00PM</td>
+                    <tr class="table-row">
+                      <td scope="col">06</td>
+                      <td scope="col">John Doe</td>
+                      <td scope="col">87654321</td>
+                      <td scope="col">mail</td>
+                      <td scope="col">11:00AM</td>
+                      <td scope="col">6:00PM</td>
                       <!-- <td><button>Activo</button></td> -->
                     </tr>
                     <!-- Agrega más filas si es necesario -->
@@ -292,16 +273,128 @@ export default {
 </script>
 <style>
 :root {
-    --red: hsl(0, 78%, 62%);
-    --cyan: hsl(180, 62%, 55%);
-    --orange: hsl(34, 97%, 64%);
-    --blue: hsl(212, 86%, 64%);
-    --varyDarkBlue: hsl(234, 12%, 34%);
-    --grayishBlue: hsl(229, 6%, 66%);
-    --veryLightGray: hsl(0, 0%, 98%);
-    --weight1: 200;
-    --weight2: 400;
-    --weight3: 600;
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --varyDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --weight1: 200;
+  --weight2: 400;
+  --weight3: 600;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--veryLightGray);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+h1:first-of-type {
+  font-weight: var(--weight1);
+  color: var(--varyDarkBlue);
+}
+
+h1:last-of-type {
+  color: var(--varyDarkBlue);
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.header {
+  text-align: center;
+  line-height: 0.8;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+.header p {
+  margin: 0 auto;
+  line-height: 2;
+  color: var(--grayishBlue);
+}
+
+.box p {
+  color: var(--grayishBlue);
+}
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+  padding: 30px;
+  margin: 20px;
+}
+
+img {
+  float: right;
+}
+
+@media (max-width: 450px) {
+  .box {
+    height: 200px;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+  .box {
+    text-align: center;
+    height: 180px;
+  }
+}
+
+.cyan {
+  border-top: 3px solid var(--cyan);
+}
+.red {
+  border-top: 3px solid var(--red);
+}
+.blue {
+  border-top: 3px solid var(--blue);
+}
+.orange {
+  border-top: 3px solid var(--orange);
+}
+
+h2 {
+  color: var(--varyDarkBlue);
+  font-weight: var(--weight3);
+}
+
+@media (min-width: 950px) {
+  .row1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-down {
+    position: relative;
+    top: 150px;
+  }
+  .box {
+    width: 20%;
+  }
+  .header p {
+    width: 30%;
+  }
 }
 .elemento {
   background-color: lightgray;
@@ -327,6 +420,7 @@ export default {
   width: 85%;
   flex-direction: column;
   align-items: center;
+  margin-top: 60px;
 }
 
 .content {
