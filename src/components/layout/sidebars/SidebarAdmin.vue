@@ -18,10 +18,18 @@
             <li>
                 <a href="#">
                     <i class="bi bi-clipboard"></i>
+                    <span class="links_name"> Gimnasios</span>
+                </a>
+                <span class="tooltip"> Gimnasios</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bi bi-calendar2-check"></i>
                     <span class="links_name"> Planes</span>
                 </a>
                 <span class="tooltip"> Planes</span>
             </li>
+            
             <li>
                 <a href="#">
                     <i class="bi bi-person"></i>
@@ -36,13 +44,7 @@
                 </a>
                 <span class="tooltip"> Pagos</span>
             </li>
-            <li>
-                <a href="#">
-                    <i class="bi bi-calendar2-check"></i>
-                    <span class="links_name"> Registros</span>
-                </a>
-                <span class="tooltip"> Registros</span>
-            </li>
+
             <li>
                 <a href="#">
                     <i class="bi bi-gear"></i>

@@ -1,141 +1,164 @@
 <template>
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <HeaderComp />
-    <div
-      class="container d-flex justify-content-center align-items-center min-vh-100"
-    >
-      <div class="row border rounded-5 p-3 bg-white shadow box-area">
-        <div
-          class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
-          style="background: #89bbcb"
-        >
-          <div class="featured-image mb-3">
-            <img
-              src="../assets/img/regis.svg"
-              class="img-fluid"
-              style="width: 250px"
-            />
-          </div>
-          <p
-            class="text-white fs-2"
-            style="
-              font-family: 'Courier New', Courier, monospace;
-              font-weight: 700;
-            "
-          >
-            Ejercitate
-          </p>
-          <small
-            class="text-white text-wrap text-center"
-            style="
-              width: 17rem;
-              font-family: 'Courier New', 'Courier', 'monospace';
-            "
-            >Busca y encuentra tu gimnasio preferido</small
-          >
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+  <HeaderComp />
+  <div
+    class="container d-flex justify-content-center align-items-center min-vh-100"
+  >
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
+      <div
+        class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+        style="background: #89bbcb"
+      >
+        <div class="featured-image mb-3">
+          <img
+            src="../assets/img/regis.svg"
+            class="img-fluid"
+            style="width: 250px"
+          />
         </div>
+        <p
+          class="text-white fs-2"
+          style="
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+          "
+        >
+          Ejercitate
+        </p>
+        <small
+          class="text-white text-wrap text-center"
+          style="
+            width: 17rem;
+            font-family: 'Courier New', 'Courier', 'monospace';
+          "
+          >Busca y encuentra tu gimnasio preferido</small
+        >
+      </div>
 
-        <div class="col-md-6 right-box" method="POST">
-          <div class="row align-items-center">
-            <div class="header-text mb-4 text-center"  >
-              <h1>Bienvenido</h1>
-              <p>Registrate y conoce una vida saludable</p>
-            </div>
-            <!-- <div class="input-group mb-3">
+      <div class="col-md-6 right-box" method="POST">
+        <div class="row align-items-center">
+          <div class="header-text mb-4 text-center">
+            <h1>Bienvenido</h1>
+            <p>Registrate y conoce una vida saludable</p>
+          </div>
+          <!-- <div class="input-group mb-3">
               <input
                 type="text"
                 class="form-control form-control-lg bg-light fs-6"
                 placeholder="Nombre"
               />
             </div> -->
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control form-control-lg bg-light fs-6"
-                placeholder="Correo electrónico"
-              />
-            </div>
-            <div class="input-group mb-3">
-              <input
-                type="number"
-                class="form-control form-control-lg bg-light fs-6"
-                placeholder="DNI"
-              />
-            </div>
-            <div class="input-group mb-3">
-              <input
-                type="password"
-                class="form-control form-control-lg bg-light fs-6"
-                placeholder="Contraseña"
-              />
-            </div>
-            <div class="input-group mb-4">
-              <input
-                type="password"
-                class="form-control form-control-lg bg-light fs-6"
-                placeholder="Confirmar contraseña"
-              />
-            </div>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control form-control-lg bg-light fs-6"
+              placeholder="Correo electrónico"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="number"
+              class="form-control form-control-lg bg-light fs-6"
+              placeholder="DNI"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="password"
+              class="form-control form-control-lg bg-light fs-6"
+              placeholder="Contraseña"
+            />
+          </div>
+          <div class="input-group mb-4">
+            <input
+              type="password"
+              class="form-control form-control-lg bg-light fs-6"
+              placeholder="Confirmar contraseña"
+            />
+          </div>
 
-            <div class="input-group mb-3">
-              <button type="button" class="btn btn-lg btn-dark w-100 fs-6" data-bs-toggle="modal" data-bs-target="#modelregister">Register</button>
-            </div>
-            <div class="input-group mb-3">
-              <!-- <button class="btn btn-lg btn-light w-100 fs-6">
+          <div class="input-group mb-3">
+            <button
+              type="button"
+              class="btn btn-lg btn-dark w-100 fs-6"
+              data-bs-toggle="modal"
+              data-bs-target="#modelregister"
+            >
+              Register
+            </button>
+          </div>
+          <div class="input-group mb-3">
+            <!-- <button class="btn btn-lg btn-light w-100 fs-6">
                 <img
                   src="../assets/img/google.svg"
                   style="width: 20px"
                   class="me-2"
                 /><small>Registrate con Google</small>
               </button> -->
-            </div>
-            <div class="row">
-              <small
-                >¿Ya estás registrado? &nbsp; &nbsp;<a
-                  href="/login"
-                  class="link-secondary"
-                  >Log in </a
-                ></small
-              >
-            </div>
+          </div>
+          <div class="row">
+            <small
+              >¿Ya estás registrado? &nbsp; &nbsp;<a
+                href="/login"
+                class="link-secondary"
+                >Log in
+              </a></small
+            >
           </div>
         </div>
       </div>
     </div>
-    <div class="modal fade" id="modelregister" tabindex="-1" aria-labelledby="modelregisterlabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modelregisterlabel">AVISO</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Eres NOMBRE_USUARIO APELLIDOUSUARIO con el número de DNI NUMERODEDNI. 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-dark">Resgistrar</button>
+  </div>
+  <div
+    class="modal fade"
+    id="modelregister"
+    tabindex="-1"
+    aria-labelledby="modelregisterlabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modelregisterlabel">AVISO</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          Eres NOMBRE_USUARIO APELLIDOUSUARIO con el número de DNI NUMERODEDNI.
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cerrar
+          </button>
+          <button type="button" class="btn btn-dark">Resgistrar</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 <script>
-import HeaderComp from '@/components/HeaderComp.vue';
+import HeaderComp from "@/components/HeaderComp.vue";
 export default {
-    components() {
-        HeaderComp;
-    },
-    components: { HeaderComp }
+  components() {
+    HeaderComp;
+  },
+  components: { HeaderComp },
 };
 </script>
 <style>
