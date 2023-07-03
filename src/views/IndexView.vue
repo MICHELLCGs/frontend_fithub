@@ -25,7 +25,7 @@
                                     <p>Muchos gimnasios a tu disposición de tu preferencia.</p>
                                 </div>
                                 <p>
-                                    <a class="btn btn-lg btn-light" href="#"><span class="dir-secciones">Ver gimnasios
+                                    <a class="btn btn-lg btn-light" href="#seccion3"><span class="dir-secciones">Ver gimnasios
                                             <i id="flecha" class="bi bi-arrow-right"></i>
                                         </span>
                                     </a>
@@ -47,7 +47,7 @@
                                     <p>FitPlan se enfoca en tu comodidad.</p>
                                 </div>
                                 <p>
-                                    <a class="btn btn-lg btn-light" href="#"><span class="dir-secciones">Ver FitPlan
+                                    <a class="btn btn-lg btn-light" href="#seccion4"><span class="dir-secciones">Ver FitPlan
                                             <i id="flecha" class="bi bi-arrow-right"></i>
                                         </span>
                                     </a>
@@ -59,7 +59,7 @@
                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <rect width="100%" height="100%" fill="#777" />
-                            <image xlink:href="@/assets/img/dirimg.svg" style="width: 100%;"/>
+                            <image xlink:href="@/assets/img/dirimg.svg" style="width: 100vw;"/>
                         </svg>
 
                         <div class="container">
@@ -69,7 +69,7 @@
                                     <p>Fomentamos el bienestar mediante el uso de tecnología.</p>
                                 </div>
                                 <p>
-                                    <a class="btn btn-lg btn-light" href="#">
+                                    <a class="btn btn-lg btn-light" href="#seccion2">
                                         <span class="dir-secciones">Sobre Nosotros
                                             <i id="flecha" class="bi bi-arrow-right"></i>
                                         </span>
@@ -114,9 +114,9 @@
                     </div>
                 </div>
 
-                <hr class="featurette-divider" />
+                <hr class="featurette-divider" id="seccion2"/>
 
-                <div class="row featurette">
+                <div class="row featurette" >
                     <div class="col-md-7 order-md-2">
                         <h2 class="featurette-heading fw-normal lh-1">
                             <b>¿Quiénes Somos?</b>
@@ -136,7 +136,7 @@
                     </div>
                 </div>
 
-                <hr class="featurette-divider" />
+                <hr class="featurette-divider" id="seccion3"/>
 
                 <div class="row featurette">
                     <div class="col-md-12 text-center align-items-center">
@@ -150,7 +150,7 @@
                     </div>
                 </div>
 
-                <hr class="featurette-divider" />
+                <hr class="featurette-divider" id="seccion4"/>
 
                 <div class="row featurette">
                     <div class="col-md-12 text-center align-items-center">
@@ -248,7 +248,7 @@ export default {
 }
 
 .text-carrusel {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .dir-secciones {
