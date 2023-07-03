@@ -87,7 +87,7 @@
             </div>
 
             <div class="input-group mb-3">
-              <button class="btn btn-lg btn-dark w-100 fs-6">Register</button>
+              <button type="button" class="btn btn-lg btn-dark w-100 fs-6" data-bs-toggle="modal" data-bs-target="#modelregister">Register</button>
             </div>
             <div class="input-group mb-3">
               <!-- <button class="btn btn-lg btn-light w-100 fs-6">
@@ -111,7 +111,23 @@
         </div>
       </div>
     </div>
-
+    <div class="modal fade" id="modelregister" tabindex="-1" aria-labelledby="modelregisterlabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modelregisterlabel">AVISO</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Eres NOMBRE_USUARIO APELLIDOUSUARIO con el número de DNI NUMERODEDNI. 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-dark">Resgistrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 <script>
 import HeaderComp from '@/components/HeaderComp.vue';
