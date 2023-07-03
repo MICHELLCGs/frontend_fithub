@@ -8,9 +8,13 @@
       </div>
 
       <ul class="list-unstyled components">
-        <p>PERFIL</p>
         <li >
-          <a href="#homeSubmenu"  aria-expanded="false"
+          <a href="/homeadmin"  aria-expanded="false"
+            >Dasboard</a
+          >
+      </li>
+        <li >
+          <a href="/admin"  aria-expanded="false"
             >Gimnasios</a
           >
         </li>
@@ -18,8 +22,8 @@
           <a href="#">About</a>
         </li>
         <li>
-          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
-            >Pages</a
+          <a href="/usuarios" data-toggle="collapse" aria-expanded="false"
+            >Usuarios</a
           >
         </li>
         <li>
