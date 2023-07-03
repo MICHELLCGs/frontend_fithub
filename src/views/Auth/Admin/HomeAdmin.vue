@@ -13,10 +13,14 @@
           <i class="bi bi-search"></i>
         </button>
       </form>
-      <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        <i class="bi bi-bell"></i
+      <button
+        type="button"
+        class="btn btn-light"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
       >
-</button>
+        <i class="bi bi-bell"></i>
+      </button>
       <div
         class="modal fade"
         id="staticBackdrop"
@@ -39,9 +43,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">
-              ETC
-            </div>
+            <div class="modal-body">ETC</div>
             <div class="modal-footer">
               <button
                 type="button"
@@ -59,9 +61,9 @@
     <div class="row1-container">
       <div class="box box-down cyan">
         <h2></h2>
-        <p>Monitors activity to identify project roadblocks</p>
+        <p>Ingresos</p>
         <img
-          src="https://assets.codepen.io/2301174/icon-supervisor.svg"
+          src="https://assets.codepen.io/2301174/icon-calculator.svg"
           alt=""
         />
       </div>
@@ -72,6 +74,14 @@
       <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
     </div> -->
 
+      <div class="box box-down red">
+        <h2></h2>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <img
+          src="https://assets.codepen.io/2301174/icon-calculator.svg"
+          alt=""
+        />
+      </div>
       <div class="box box-down blue">
         <h2></h2>
         <p>Uses data from past projects to provide better delivery estimates</p>
@@ -81,7 +91,7 @@
         />
       </div>
     </div>
-    
+
     <!-- <div class="row2-container">
     <div class="box orange">
       <h2></h2>
@@ -89,42 +99,150 @@
       <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="">
     </div>
   </div> -->
-  <main role="main" class="container tab">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Tabla Usuarios</h1>
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Código</th>
-                                    <th>Precio</th>
-                                    <th>Cantidad</th>
-                                    <th>Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>BARRITAS FRESA</td>
-                                    <td>1</td>
-                                    <td>50.0</td>
-                                    <td>1.0</td>
-                                    <td>50.0</td>
-                                </tr>
-                                <tr>
-                                    <td>BARRITAS MORAS</td>
-                                    <td>2</td>
-                                    <td>30.0</td>
-                                    <td>1.0</td>
-                                    <td>30.0</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </main>
+    <main role="main" class="container tab">
+      <div class="row">
+        <div class="col-12">
+          <h1>Tabla Usuarios</h1>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>NOMBRE</th>
+                  <th>APELLIDOS</th>
+                  <th>DNI</th>
+                  <th>MAIL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Lucas</td>
+                  <td>Castillo</td>
+                  <td>45368729</td>
+                  <td>example@mail.com</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Martha</td>
+                  <td>Olivares</td>
+                  <td>65372897</td>
+                  <td>example@mail.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <main role="main" class="container tab">
+      <div class="row">
+        <div class="col-12">
+          <h1>Tabla Pagos</h1>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Cod. Usuario</th>
+                  <th>FECHA</th>
+                  <th>NRO. de Operacion</th>
+                  <th>MONTO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>1</td>
+                  <td>3/07/2023</td>
+                  <td>764356</td>
+                  <td>109.90</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>2</td>
+                  <td>10/06/2023</td>
+                  <td>768456</td>
+                  <td>109.90</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <main role="main" class="container tab">
+      <div class="row">
+        <div class="col-12">
+          <h1>Tabla Gimnasios</h1>
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>NOMBRE</th>
+                  <th>MAIL</th>
+                  <th>UBICACIÓN</th>
+                  <th>CAPACIDAD</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>001</td>
+                  <td>Olimpo</td>
+                  <td>example@mail.com</td>
+                  <td>Arequipa...</td>
+                  <td>40</td>
+                </tr>
+                <tr>
+                  <td>002</td>
+                  <td>Smartfit</td>
+                  <td>example@mail.como</td>
+                  <td>Arequipa...</td>
+                  <td>45</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <main role="main" class="container tab">
+      <div class="row">
+        <div class="col-12">
+          <h1>Tabla Partner</h1>
+          <div class="table-responsive">
+            <table class="table table-bordered" style="margin-bottom: 100px;">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>NOMBRE</th>
+                  <th>APELLIDO</th>
+                  <th>MAIL</th>
+                  <th>CÓDIGO GIMNASIO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>Lorenzo</td>
+                  <td>Omar</td>
+                  <td>example@mail.com</td>
+                  <td>001</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>Thalia</td>
+                  <td>Montenegro</td>
+                  <td>example@mail.com</td>
+                  <td>002</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
 </template>
 
@@ -143,16 +261,16 @@ export default {
 Home Content
 */
 .draggable-box {
-    border-radius: 5px;
-    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
-    padding: 30px;
-    margin: 20px;
-    cursor: grab;
-    position: relative;
-    z-index: 1;
-  }
-.tab{
-  margin-top: 200px;
+  border-radius: 5px;
+  box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+  padding: 30px;
+  margin: 20px;
+  cursor: grab;
+  position: relative;
+  z-index: 1;
+}
+.tab {
+  margin-top: 90px;
 }
 .items {
   margin-left: 1000px;
@@ -262,7 +380,7 @@ h1:last-of-type {
   border-radius: 5px;
   box-shadow: 0px 30px 40px -20px var(--grayishBlue);
   padding: 30px;
-  margin: 20px;
+  margin-right: 200px;
 }
 
 img {
@@ -314,7 +432,9 @@ h2 {
   }
   .box-down {
     position: relative;
-    top: 150px;
+    margin-top: 40px;
+    margin-left: 0px;
+    margin-right: 90px;
   }
   .box {
     width: 20%;
