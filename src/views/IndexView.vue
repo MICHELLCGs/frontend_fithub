@@ -14,7 +14,7 @@
                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <rect width="100%" height="100%" fill="#777" />
-                            <image xlink:href="../assets/img/gim.png" style="max-width: auto; height: 100%" />
+                            <image xlink:href="../assets/img/gim.svg" style="width: 100%;" />
                         </svg>
 
 
@@ -37,7 +37,7 @@
                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <rect width="100%" height="100%" fill="#777" />
-                            <image xlink:href="@/assets/img/entreimg.png" style="max-width: auto; height: 100%" />
+                            <image xlink:href="../assets/img/entreimg.svg" style="width: 100%;" />
                         </svg>
 
                         <div class="container">
@@ -59,7 +59,7 @@
                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <rect width="100%" height="100%" fill="#777" />
-                            <image xlink:href="@/assets/img/dirimg.png" style="max-width: auto; height: 100%" />
+                            <image xlink:href="@/assets/img/dirimg.svg" style="width: 100%;"/>
                         </svg>
 
                         <div class="container">
