@@ -55,6 +55,11 @@ const routes = [
     name: "usuarios",
     component: () => import("@/views/Auth/Admin/Usuarios.vue"),
   },
+  {
+    path: "/homeadmingym",
+    name: "homeadmingym",
+    component: () => import("@/views/Auth/AdminGym/HomeAdminGym.vue"),
+  },
   //{ path: "*", component: PageNotFound },
 ];
 const router = createRouter({
