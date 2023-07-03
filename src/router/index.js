@@ -9,11 +9,6 @@ const routes = [
 
   },
   {
-    path: "/admin",
-    name: "admin",
-    component: () => import("@/views/AdminView.vue"),
-  },
-  {
     path: "/login",
     name: "login",
     component: () => import("@/components/LoginComp.vue"),
@@ -53,6 +48,12 @@ const routes = [
     path: "/homeadmin",
     name: "homeadmin",
     component: () => import("@/views/Auth/Admin/HomeAdmin.vue"),
+  },
+  ,
+  {
+    path: "/usuarios",
+    name: "usuarios",
+    component: () => import("@/views/Auth/Admin/Usuarios.vue"),
   },
   //{ path: "*", component: PageNotFound },
 ];

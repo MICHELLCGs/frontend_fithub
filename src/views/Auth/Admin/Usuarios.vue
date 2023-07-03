@@ -5,19 +5,28 @@
       <div class="head">
         <nav class="navbar navbar-light bg-light">
           <form class="form-inline">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
+            <div class="input-group">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <div class="input-group-append ml-auto">
+                <button
+                  class="btn btn-outline-success my-2 my-sm-0 btn-position"
+                  type="submit"
+                >
+                  Search
+                </button>
+              </div>
+              <div class="elemento">Elemento</div>
+            </div>
           </form>
         </nav>
       </div>
     </div>
+
     <div class="content">
       <div class="cards">
         <div class="card text-white bg-primary mb-1" style="max-width: 18rem">
@@ -70,10 +79,10 @@
                       <td>mail</td>
                       <td>8:00AM</td>
                       <td>3:00PM</td>
-                      <!-- <td>
+                      <td>
                         <button>Editar</button>
                         <button>Eliminar</button>
-                      </td> -->
+                      </td>
                     </tr>
                     <tr>
                       <td>02</td>
@@ -83,9 +92,9 @@
                       <td>9:00AM</td>
                       <td>4:00PM</td>
                       <!-- <td>
-                        <button>Editar</button>
-                        <button>Eliminar</button>
-                      </td> -->
+                          <button>Editar</button>
+                          <button>Eliminar</button>
+                        </td> -->
                     </tr>
                     <tr>
                       <td>03</td>
@@ -95,9 +104,9 @@
                       <td>8:00AM</td>
                       <td>3:00PM</td>
                       <!-- <td>
-                        <button>Editar</button>
-                        <button>Eliminar</button>
-                      </td> -->
+                          <button>Editar</button>
+                          <button>Eliminar</button>
+                        </td> -->
                     </tr>
                     <tr>
                       <td>04</td>
@@ -107,9 +116,9 @@
                       <td>8:00AM</td>
                       <td>3:00PM</td>
                       <!-- <td>
-                        <button>Editar</button>
-                        <button>Eliminar</button>
-                      </td> -->
+                          <button>Editar</button>
+                          <button>Eliminar</button>
+                        </td> -->
                     </tr>
                   </tbody>
                 </table>
@@ -118,136 +127,7 @@
           </div>
         </section>
 
-        <section class="attendance">
-          <div class="attendance-list table-container">
-            <section class="attendance">
-              <div class="attendance-list">
-                <h1><center>tabla Gimnasios</center></h1>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Nombre</th>
-                      <th>dni</th>
-                      <th>Mail</th>
-                      <th>Etc</th>
-                      <th>etc</th>
-                      <th>Estado</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>05</td>
-                      <td>Jane Smith</td>
-                      <td>12345678</td>
-                      <td>mail</td>
-                      <td>10:00AM</td>
-                      <td>5:00PM</td>
-                      <!-- <td><button>Activo</button></td> -->
-                    </tr>
-                    <tr>
-                      <td>06</td>
-                      <td>John Doe</td>
-                      <td>87654321</td>
-                      <td>mail</td>
-                      <td>11:00AM</td>
-                      <td>6:00PM</td>
-                      <!-- <td><button>Activo</button></td> -->
-                    </tr>
-                    <!-- Agrega más filas si es necesario -->
-                  </tbody>
-                </table>
-              </div>
-            </section>
-          </div>
-        </section>
 
-        <section class="attendance">
-          <div class="attendance-list table-container">
-            <section class="attendance">
-              <div class="attendance-list">
-                <h1><center>tabla Pagos</center></h1>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Nombre</th>
-                      <th>Ubicación</th>
-                      <th>Mail</th>
-                      <th>Foro</th>
-                      <th>etc</th>
-                      <th>Estado</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>05</td>
-                      <td>Jane Smith</td>
-                      <td>12345678</td>
-                      <td>mail</td>
-                      <td>10:00AM</td>
-                      <td>5:00PM</td>
-                      <!-- <td><button>Activo</button></td> -->
-                    </tr>
-                    <tr>
-                      <td>06</td>
-                      <td>John Doe</td>
-                      <td>87654321</td>
-                      <td>mail</td>
-                      <td>11:00AM</td>
-                      <td>6:00PM</td>
-                      <!-- <td><button>Activo</button></td> -->
-                    </tr>
-                    <!-- Agrega más filas si es necesario -->
-                  </tbody>
-                </table>
-              </div>
-            </section>
-          </div>
-        </section>
-        <section class="attendance">
-          <div class="attendance-list table-container">
-            <section class="attendance">
-              <div class="attendance-list">
-                <h1><center>tabla Partners</center></h1>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Nombre</th>
-                      <th>dni</th>
-                      <th>Mail</th>
-                      <th>Etc</th>
-                      <th>etc</th>
-                      <th>Estado</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>05</td>
-                      <td>Jane Smith</td>
-                      <td>12345678</td>
-                      <td>mail</td>
-                      <td>10:00AM</td>
-                      <td>5:00PM</td>
-                      <!-- <td><button>Activo</button></td> -->
-                    </tr>
-                    <tr>
-                      <td>06</td>
-                      <td>John Doe</td>
-                      <td>87654321</td>
-                      <td>mail</td>
-                      <td>11:00AM</td>
-                      <td>6:00PM</td>
-                      <!-- <td><button>Activo</button></td> -->
-                    </tr>
-                    <!-- Agrega más filas si es necesario -->
-                  </tbody>
-                </table>
-              </div>
-            </section>
-          </div>
-        </section>
       </div>
     </div>
   </div>
@@ -262,7 +142,16 @@ export default {
 };
 </script>
 <style>
-.head{
+.elemento {
+  background-color: lightgray;
+  padding: 5px;
+}
+.btn-position {
+  position: absolute;
+  right: -12px;
+  margin-right: 40px;
+}
+.head {
   margin-left: 25px;
   width: 100%;
 }

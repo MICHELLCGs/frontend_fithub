@@ -10,8 +10,8 @@
       <ul class="list-unstyled components">
         <p>PERFIL</p>
         <li >
-          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
-            >Home</a
+          <a href="#homeSubmenu"  aria-expanded="false"
+            >Gimnasios</a
           >
         </li>
         <li>
