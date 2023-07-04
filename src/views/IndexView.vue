@@ -14,7 +14,7 @@
                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <rect width="100%" height="100%" fill="#777" />
-                            <image xlink:href="../assets/img/gim.svg" style="width: 100%;" />
+                            <image xlink:href="@/assets/img/gim.svg" style="width: 100%;" />
                         </svg>
 
 
@@ -37,7 +37,7 @@
                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <rect width="100%" height="100%" fill="#777" />
-                            <image xlink:href="../assets/img/entreimg.svg" style="width: 100%;" />
+                            <image xlink:href="@/assets/img/entreimg.svg" style="width: 100%;" />
                         </svg>
 
                         <div class="container">
@@ -108,7 +108,7 @@
                             entrenamiento al siguiente nivel.
                         </p>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5" >
                         <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
                             src="../assets/img/sec1.png" alt="Seccion1" />
                     </div>
