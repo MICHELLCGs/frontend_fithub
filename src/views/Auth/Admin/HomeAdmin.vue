@@ -254,12 +254,23 @@ export default {
   },
   components: { SidebarAdmin },
 };
+import { Bar } from 'vue-chartjs'
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
+
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 </script>
 
 <style>
 /*
 Home Content
 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
 .draggable-box {
   border-radius: 5px;
   box-shadow: 0px 30px 40px -20px var(--grayishBlue);

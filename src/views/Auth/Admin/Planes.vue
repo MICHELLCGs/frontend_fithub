@@ -2,7 +2,7 @@
   <SidebarAdmin />
   <div class="home_content">
     <div class="create-button">
-      <button class="btn btn-dark" @click="createRow">Crear Registro</button>
+      <button class="btn btn-dark butcreate" @click="createRow">Crear Registro</button>
     </div>
     <main role="main" class="container tab">
       <div class="row">
@@ -13,23 +13,23 @@
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>NOMBRE</th>
-                  <th>APELLIDO</th>
-                  <th>MAIL</th>
-                  <th>CÓDIGO GIMNASIO</th>
+                  <th>COD. USUARIO</th>
+                  <th>FECHA</th>
+                  <th>NRO. DE OPERACIÓN</th>
+                  <th>MONTO</th>
                   <th>ACCIONES</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="row in rows" :key="row.id">
                   <td>{{ row.id }}</td>
-                  <td>{{ row.nombre }}</td>
-                  <td>{{ row.apellido }}</td>
-                  <td>{{ row.mail }}</td>
-                  <td>{{ row.codigo_gimnasio }}</td>
+                  <td>{{ row.cod_user}}</td>
+                  <td>{{ row.fecha }}</td>
+                  <td>{{ row.nro_operacion }}</td>
+                  <td>{{ row.monto }}</td>
                   <td>
-                    <button class="btn btn-success" @click="editRow(row.id)">Editar</button>
-                    <button class="btn btn-danger" @click="deleteRow(row.id)">Borrar</button>
+                    <button class="btn btn-success buttab" @click="editRow(row.id)">Editar</button>
+                    <button class="btn btn-danger buttab" @click="deleteRow(row.id)">Borrar</button>
                   </td>
                 </tr>
               </tbody>
@@ -43,8 +43,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">{{ editingRow ? 'Editar Registro' : 'Crear Registro' }}</h5>
-            <button type="button" class="close" @click="cancelEdit">
-              <span>&times;</span>
+            <button type="button" class="btn-close" @click="cancelEdit">
+              <span></span>
             </button>
           </div>
           <div class="modal-body">
@@ -54,23 +54,23 @@
                 <input type="text" class="form-control" id="id" v-model="editingRow.id" disabled>
               </div>
               <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" v-model="editingRow.nombre">
+                <label for="cod_user">COD USUARIO</label>
+                <input type="text" class="form-control" id="cod_user" v-model="editingRow.cod_user">
               </div>
               <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input type="text" class="form-control" id="apellido" v-model="editingRow.apellido">
+                <label for="fecha">FECHA</label>
+                <input type="text" class="form-control" id="fecha" v-model="editingRow.fecha">
               </div>
               <div class="form-group">
-                <label for="mail">Mail</label>
-                <input type="email" class="form-control" id="mail" v-model="editingRow.mail">
+                <label for="nro_operacion">NRO DE OPERACIÓN</label>
+                <input type="text" class="form-control" id="mail" v-model="editingRow.nro_operacion">
               </div>
               <div class="form-group">
-                <label for="codigo_gimnasio">Código Gimnasio</label>
-                <input type="text" class="form-control" id="codigo_gimnasio" v-model="editingRow.codigo_gimnasio">
+                <label for="monto">MONTO</label>
+                <input type="text" class="form-control" id="monto" v-model="editingRow.monto">
               </div>
-              <button type="submit" class="btn btn-primary">{{ editingRow ? 'Guardar Cambios' : 'Crear' }}</button>
-              <button type="button" class="btn btn-secondary" @click="cancelEdit">Cancelar</button>
+              <button type="submit" class="btn btn-primary butinside">{{ editingRow ? 'Guardar Cambios' : 'Crear' }}</button>
+              <button type="button" class="btn btn-secondary butinside" @click="cancelEdit">Cancelar</button>
             </form>
           </div>
         </div>
@@ -95,17 +95,17 @@ export default {
       rows: [
         {
           id: "01",
-          nombre: "Lorenzo",
-          apellido: "Omar",
-          mail: "example@mail.com",
-          codigo_gimnasio: "001",
+          cod_user: "1",
+          fecha: "4/4/2023",
+          nro_operacion: "33123123",
+          monto: "99.9",
         },
         {
           id: "02",
-          nombre: "Thalia",
-          apellido: "Montenegro",
-          mail: "example@mail.com",
-          codigo_gimnasio: "002",
+          cod_user:"2",
+          fecha: "4/5/2023",
+          nro_operacion:"245234532",
+          monto: "99.9",
         },
       ],
       editingRow: null,
@@ -178,6 +178,13 @@ export default {
   flex-grow: 1;
   overflow-y: auto;
 }
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
 
 .sidebar.active ~ .home_content {
   left: 240px;
@@ -223,5 +230,16 @@ export default {
 
 .create-button {
   margin: 20px;
+}
+.butcreate{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.butinside{
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.buttab{
+  margin-right: 10px;
 }
 </style>
