@@ -205,9 +205,12 @@ export default {
 
 /* Estilos del REFERIDO */
 .custom-btn {
-   background-color: #2D325B; /* Cambia este valor al color deseado */
-   color: #ffffff; /* Cambia este valor al color del texto deseado */
+   background-color: #2D325B; 
+   color: #ffffff;
+   height: 50px;
+
 }
+
 
 /* Estilos del CONFIGURACION */
 
