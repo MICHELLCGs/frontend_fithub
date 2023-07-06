@@ -7,16 +7,16 @@
     <main role="main" class="container tab">
       <div class="row">
         <div class="col-12">
-          <h1>Tabla Planes</h1>
+          <h1>Tabla Gimnasios</h1>
           <div class="table-responsive">
             <table class="table table-bordered" style="margin-bottom: 100px">
               <thead>
                 <tr>
                   <th>ID</th>
                   <th>NOMBRE</th>
-                  <th>APELLIDO</th>
                   <th>MAIL</th>
-                  <th>CÓDIGO GIMNASIO</th>
+                  <th>UBICACIÓN</th>
+                  <th>CAPACIDAD</th>
                   <th>ACCIONES</th>
                 </tr>
               </thead>
@@ -24,9 +24,9 @@
                 <tr v-for="row in rows" :key="row.id">
                   <td>{{ row.id }}</td>
                   <td>{{ row.nombre }}</td>
-                  <td>{{ row.apellido }}</td>
                   <td>{{ row.mail }}</td>
-                  <td>{{ row.codigo_gimnasio }}</td>
+                  <td>{{ row.ubicacion }}</td>
+                  <td>{{ row.capacidad }}</td>
                   <td>
                     <button class="btn btn-success buttab" @click="editRow(row.id)">Editar</button>
                     <button class="btn btn-danger buttab" @click="deleteRow(row.id)">Borrar</button>
@@ -58,16 +58,16 @@
                 <input type="text" class="form-control" id="nombre" v-model="editingRow.nombre">
               </div>
               <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input type="text" class="form-control" id="apellido" v-model="editingRow.apellido">
+                <label for="mail">mail</label>
+                <input type="text" class="form-control" id="mail" v-model="editingRow.mail">
               </div>
               <div class="form-group">
-                <label for="mail">Mail</label>
-                <input type="email" class="form-control" id="mail" v-model="editingRow.mail">
+                <label for="ubicacion">ubicacion</label>
+                <input type="text" class="form-control" id="ubicacion" v-model="editingRow.ubicacion">
               </div>
               <div class="form-group">
-                <label for="codigo_gimnasio">Código Gimnasio</label>
-                <input type="text" class="form-control" id="codigo_gimnasio" v-model="editingRow.codigo_gimnasio">
+                <label for="capacidad">Capacidad</label>
+                <input type="text" class="form-control" id="capacidad" v-model="editingRow.capacidad">
               </div>
               <button type="submit" class="btn btn-primary butinside">{{ editingRow ? 'Guardar Cambios' : 'Crear' }}</button>
               <button type="button" class="btn btn-secondary butinside" @click="cancelEdit">Cancelar</button>
@@ -94,18 +94,18 @@ export default {
     return {
       rows: [
         {
-          id: "01",
-          nombre: "Lorenzo",
-          apellido: "Omar",
+          id: "001",
+          nombre: "Olimpo",
           mail: "example@mail.com",
-          codigo_gimnasio: "001",
+          ubicacion: "Arequipa",
+          capacidad: "40",
         },
         {
-          id: "02",
+          id: "002",
           nombre: "Thalia",
-          apellido: "Montenegro",
           mail: "example@mail.com",
-          codigo_gimnasio: "002",
+          ubicacion: "Arequipa",
+          capacidad: "40",
         },
       ],
       editingRow: null,
@@ -144,9 +144,9 @@ export default {
       this.editingRow = {
         id: "",
         nombre: "",
-        apellido: "",
         mail: "",
-        codigo_gimnasio: "",
+        ubicacion: "",
+        capacidad: "",
       };
     },
   },

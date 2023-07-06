@@ -143,10 +143,10 @@ export default {
     createRow() {
       this.editingRow = {
         id: "",
-        nombre: "",
-        apellido: "",
-        mail: "",
-        codigo_gimnasio: "",
+        cod_user: "",
+        fecha: "",
+        numero_operacion: "",
+        monto: "",
       };
     },
   },
