@@ -37,7 +37,7 @@
         <span class="tooltip"> Store</span>
       </li>
       <li>
-        <a class="btn custom-btn d-flex align-items-center"
+        <a class="btn custom-btn d-flex align-left"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasRight"
@@ -48,9 +48,9 @@
         <span class="tooltip"> Referidos</span>
       </li>
 
-      <li>
+      <li >
         <a
-        class="btn custom-btn d-flex align-items-center"
+        class="btn custom-btn d-flex align-left"
           data-bs-toggle="modal"
           href="#exampleModalToggle"
           role="button"
@@ -208,10 +208,16 @@ export default {
    background-color: #2D325B; /* Cambia este valor al color deseado */
    color: #ffffff; /* Cambia este valor al color del texto deseado */
 }
+
 /* Estilos del CONFIGURACION */
 
 body {
   font-family: Arial, sans-serif;
+}
+
+.align-left {
+    justify-content: flex-start;
+    padding-left: 0px; /* Ajusta este valor según tu preferencia */
 }
 
 .profile-container {
