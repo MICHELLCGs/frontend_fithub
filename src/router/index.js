@@ -25,19 +25,24 @@ const routes = [
     component: () => import("@/views/CompraView.vue"),
   },
   {
-    path: "/home",
-    name: "home",
-    component: () => import("@/views/HomeView.vue"),
+    path: "/homecustomer",
+    name: "homecustomer",
+    component: () => import("@/views/Auth/Customer/HomeCustomer.vue"),
   },
   {
-    path: "/perfil",
-    name: "perfil",
-    component: () => import("@/views/PerfilHome.vue"),
+    path: "/storecustomer",
+    name: "storecustomer",
+    component: () => import("@/views/Auth/Customer/StoreCustomer.vue"),
   },
   {
-    path: "/uasistencia",
-    name: "uasistencia",
-    component: () => import("@/views/Uasistencia.vue"),
+    path: "/gymcustomer",
+    name: "gymcustomer",
+    component: () => import("@/views/Auth/Customer/GymCustomer.vue"),
+  },
+  {
+    path: "/pagoscustomer",
+    name: "pagoscustomer",
+    component: () => import("@/views/Auth/Customer/PagosCustomer.vue"),
   },
   {
     path: "/pay",
