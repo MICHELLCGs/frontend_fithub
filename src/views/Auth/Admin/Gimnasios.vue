@@ -42,7 +42,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">{{ editingRow ? 'Editar Registro' : 'Crear Registro' }}</h5>
+            <h5 class="modal-title">{{ editingRow ? 'Crear Registro' : 'Editar Registro' }}</h5>
             <button type="button" class="btn-close" @click="cancelEdit">
               <span></span>
             </button>

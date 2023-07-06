@@ -86,7 +86,7 @@
 
       <div class="box box-down red">
         <h2></h2>
-        <p>Uses data from past projects to provide better delivery estimates</p>
+        <p>Ingresos</p>
         <img
           src="https://assets.codepen.io/2301174/icon-calculator.svg"
           alt=""
@@ -94,7 +94,7 @@
       </div>
       <div class="box box-down blue">
         <h2></h2>
-        <p>Uses data from past projects to provide better delivery estimates</p>
+        <p>Ingresos</p>
         <img
           src="https://assets.codepen.io/2301174/icon-calculator.svg"
           alt=""
