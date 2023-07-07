@@ -163,8 +163,8 @@
                         </p>
                     </div>
                     <div class="col-md-6 d-flex offset-md-3 custom-div">
-                        <div class="cards">
-                            <div class="card">
+                        <div class="tarjetas">
+                            <div class="tarjeta">
                                 <div class="title">
                                     <div class="circle"></div>
                                     <i class="bi bi-lightning-charge-fill"></i>
@@ -314,7 +314,7 @@ export default {
     border-radius: 80px;
 }
 
-.cards {
+.tarjetas {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -326,7 +326,7 @@ export default {
     justify-content: center;
 }
 
-.card {
+.tarjeta {
     width: auto;
     margin: 25px;
     padding: 40px 20px;
@@ -375,7 +375,7 @@ export default {
     text-decoration: none;
 }
 
-.card:hover {
+.tarjeta:hover {
     transform: scale(1.05);
 }
 </style>
