@@ -68,6 +68,21 @@ const routes = [
     component: () => import("@/views/Auth/Admin/AdminViews/Gimnasios.vue"),
   },
   {
+    path: "/pagosadmin",
+    name: "pagossadmin",
+    component: () => import("@/views/Auth/Admin/AdminViews/Pagos.vue"),
+  },
+  {
+    path: "/planesadmin",
+    name: "planesadmin",
+    component: () => import("@/views/Auth/Admin/AdminViews/Planes.vue"),
+  },
+  {
+    path: "/configuracionadmin",
+    name: "configuracionadmin",
+    component: () => import("@/views/Auth/Admin/AdminViews/Configuracion.vue"),
+  },
+  {
     path: "/homeadmingym",
     name: "homeadmingym",
     component: () => import("@/views/Auth/AdminGym/HomeAdminGym.vue"),

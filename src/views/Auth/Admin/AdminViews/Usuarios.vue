@@ -1,275 +1,245 @@
 <template>
-  <div class="content-container">
-    <SidebarAdmin />
-    <div class="content">
-      <div class="head">
-        <nav class="navbar navbar-light bg-light">
-          <form class="form-inline">
-            <div class="input-group">
-              <input
-                class="form-control mr-sm-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <div class="input-group-append ml-auto">
-                <button
-                  class="btn btn-outline-success my-2 my-sm-0 btn-position"
-                  type="submit"
-                >
-                  Search
-                </button>
+  <SidebarAdmin />
+  <div class="home_content">
+    <div class="create-button">
+      <button class="btn btn-dark butcreate" @click="createRow">Crear Registro</button>
+    </div>
+    <main role="main" class="container tab">
+      <div class="row">
+        <div class="col-12">
+          <h1>Tabla Usuarios</h1>
+          <div class="table-responsive">
+            <table class="table table-bordered" style="margin-bottom: 100px">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>NOMBRE</th>
+                  <th>APELLIDOS</th>
+                  <th>DNI</th>
+                  <th>MAIL</th>
+                  <th>ACCIONES</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="row in rows" :key="row.id">
+                  <td>{{ row.id }}</td>
+                  <td>{{ row.nombre }}</td>
+                  <td>{{ row.apellidos }}</td>
+                  <td>{{ row.dni }}</td>
+                  <td>{{ row.mail }}</td>
+                  <td>
+                    <button class="btn btn-success buttab" @click="editRow(row.id)">Editar</button>
+                    <button class="btn btn-danger buttab" @click="deleteRow(row.id)">Borrar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="modal" v-if="editingRow">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">{{ editingRow ? 'Crear Registro' : 'Editar Registro' }}</h5>
+            <button type="button" class="btn-close" @click="cancelEdit">
+              <span></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form @submit.prevent="saveChanges">
+              <div class="form-group">
+                <label for="id">ID</label>
+                <input type="text" class="form-control" id="id" v-model="editingRow.id" disabled>
               </div>
-              <div class="elemento">Elemento</div>
-            </div>
-          </form>
-        </nav>
-      </div>
-    </div>
-
-    <div class="content">
-      <div class="cards">
-        <div class="card text-white bg-primary mb-1" style="max-width: 18rem">
-          <div class="card-header">Header</div>
-          <div class="card-body">
-            <h5 class="card-title">Primary card title</h5>
-            <p class="card-text">Hola</p>
-          </div>
-        </div>
-        <div class="card text-white bg-danger mb-3" style="max-width: 18rem">
-          <div class="card-header">Header</div>
-          <div class="card-body">
-            <h5 class="card-title">Primary card title</h5>
-            <p class="card-text">Hola</p>
-          </div>
-        </div>
-        <div class="card text-white bg-success mb-3" style="max-width: 18rem">
-          <div class="card-header">Header</div>
-          <div class="card-body">
-            <h5 class="card-title">Primary card title</h5>
-            <p class="card-text">Hola</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content">
-      <div class="tab">
-        <section class="attendance">
-          <div class="attendance-list table-container">
-            <section class="attendance">
-              <div class="attendance-list">
-                <h1>Tabla Usuarios</h1>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Nombre</th>
-                      <th>DNI</th>
-                      <th>Mail</th>
-                      <th>etc</th>
-                      <th>etc</th>
-                      <th>Plan</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>01</td>
-                      <td>Sam David</td>
-                      <td>57659033</td>
-                      <td>mail</td>
-                      <td>8:00AM</td>
-                      <td>3:00PM</td>
-                      <td>
-                        <button>Editar</button>
-                        <button>Eliminar</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>02</td>
-                      <td>Balbina Kherr</td>
-                      <td>45673489</td>
-                      <td>mail</td>
-                      <td>9:00AM</td>
-                      <td>4:00PM</td>
-                      <!-- <td>
-                          <button>Editar</button>
-                          <button>Eliminar</button>
-                        </td> -->
-                    </tr>
-                    <tr>
-                      <td>03</td>
-                      <td>Badan John</td>
-                      <td>76459823</td>
-                      <td>mail</td>
-                      <td>8:00AM</td>
-                      <td>3:00PM</td>
-                      <!-- <td>
-                          <button>Editar</button>
-                          <button>Eliminar</button>
-                        </td> -->
-                    </tr>
-                    <tr>
-                      <td>04</td>
-                      <td>Sara David</td>
-                      <td>34764987</td>
-                      <td>mail</td>
-                      <td>8:00AM</td>
-                      <td>3:00PM</td>
-                      <!-- <td>
-                          <button>Editar</button>
-                          <button>Eliminar</button>
-                        </td> -->
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="form-group">
+                <label for="nombre">Nombres</label>
+                <input type="text" class="form-control" id="nombre" v-model="editingRow.nombre">
               </div>
-            </section>
+              <div class="form-group">
+                <label for="apellidos">apellidos</label>
+                <input type="text" class="form-control" id="apellidos" v-model="editingRow.apellidos">
+              </div>
+              <div class="form-group">
+                <label for="dni">dni</label>
+                <input type="text" class="form-control" id="dni" v-model="editingRow.dni">
+              </div>
+              <div class="form-group">
+                <label for="mail">mail</label>
+                <input type="text" class="form-control" id="mail" v-model="editingRow.mail">
+              </div>
+              <button type="submit" class="btn btn-primary butinside">{{ editingRow ? 'Guardar Cambios' : 'Crear' }}</button>
+              <button type="button" class="btn btn-secondary butinside" @click="cancelEdit">Cancelar</button>
+            </form>
           </div>
-        </section>
-
-
+        </div>
       </div>
     </div>
+
   </div>
 </template>
+
 <script>
+import 'bootstrap/dist/css/bootstrap.min.css'; // Importa el CSS de Bootstrap
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importa el JavaScript de Bootstrap
+
 import SidebarAdmin from "@/components/layout/sidebars/SidebarAdmin.vue";
 export default {
-  components() {
-    SidebarAdmin;
+  name: "Gimnasios",
+  components: {
+    SidebarAdmin,
   },
-  components: { SidebarAdmin },
+  data() {
+    return {
+      rows: [
+        {
+          id: "1",
+          nombre: "Lucas",
+          apellidos: "Catillo",
+          dni: "45368729",
+          mail: "example@mail.com",
+        },
+        {
+          id: "2",
+          nombre: "Thalia",
+          apellidos: "example@mail.com",
+          dni: "example@mail.com",
+          mail: "example@mail.com",
+        },
+      ],
+      editingRow: null,
+    };
+  },
+  methods: {
+    editRow(id) {
+      // Obtener los datos del registro correspondiente al ID
+      // Puedes realizar una petición a tu API o trabajar con datos simulados
+      // Aquí se utiliza el array "rows" para buscar el registro
+      const rowData = this.rows.find(row => row.id === id);
+      this.editingRow = { ...rowData };
+    },
+    deleteRow(id) {
+      // Aquí puedes realizar una petición a tu API para borrar el registro correspondiente al ID
+      // Por simplicidad, se mostrará un mensaje en la consola y se eliminará el registro del array "rows"
+      console.log("Borrando registro con ID:", id);
+      this.rows = this.rows.filter(row => row.id !== id);
+    },
+    saveChanges() {
+      if (this.editingRow) {
+        // Aquí puedes realizar una petición a tu API para guardar los cambios del registro existente
+        // this.editingRow contiene los datos editados del formulario
+        console.log("Guardando cambios", this.editingRow);
+      } else {
+        // Aquí puedes realizar una petición a tu API para crear un nuevo registro
+        // this.editingRow contiene los datos del nuevo registro
+        console.log("Creando registro", this.editingRow);
+      }
+      this.cancelEdit();
+    },
+    cancelEdit() {
+      this.editingRow = null;
+    },
+    createRow() {
+      this.editingRow = {
+        id: "",
+        nombre: "",
+        Apellidos: "",
+        dni: "",
+        mail: "",
+      };
+    },
+  },
 };
 </script>
+
 <style>
-.elemento {
-  background-color: lightgray;
-  padding: 5px;
-}
-.btn-position {
-  position: absolute;
-  right: -12px;
-  margin-right: 40px;
-}
-.head {
-  margin-left: 25px;
-  width: 100%;
-}
-.cards {
-  display: flex;
-  flex-direction: row; /* Cambiar de "column" a "row" */
-  width: 85%;
-  align-items: none;
-}
-.tab {
-  display: flex;
-  width: 85%;
-  flex-direction: column;
-  align-items: center;
-}
-
-.content {
-  flex-grow: 1;
-  margin-left: 90px; /* Ancho del sidebar */
-  padding: 20px;
-  position: relative;
-}
-.content-container {
-  margin-left: 110px;
-  padding: 20px;
-  transition: all 0.3s;
-}
-
-.attendance {
-  margin-top: 20px;
-  text-transform: capitalize;
-}
-.attendance-list {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-}
-.attendance-list.table-container {
-  width: calc(190% - 300px);
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.table {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 15px;
-  min-width: 100%;
-  overflow: hidden;
-  border-radius: 5px 5px 0 0;
-}
-table thead tr {
-  color: #fff;
-  background: #34af6d;
-  text-align: left;
-  font-weight: bold;
-}
-.table th,
-.table td {
-  padding: 8px 5px;
-  margin-right: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.table tbody tr {
-  border-bottom: 1px solid #ddd;
-}
-.table tbody tr:nth-of-type(odd) {
-  background: #f3f3f3;
-}
-.table tbody tr.active {
-  font-weight: bold;
-  color: #4d4443;
-}
-.table tbody tr:last-of-type {
-  border-bottom: 2px solid #4d4443;
-}
-.table button {
-  padding: 6px 20px;
-  margin-right: 4px;
-  border-radius: 10px;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid #4d4443;
-}
-.table button:hover {
-  background: #4d4443;
-  color: #fff;
-  transition: 0.5rem;
-}
-
-@media screen and (max-width: 300px) {
-  .content {
-    padding-left: 0;
-  }
-  .attendance-list.table-container {
-    margin: 0 auto;
-  }
+/*
+  Home Content
+  */
   .tab {
-    margin-top: 0;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-    display: flex;
-  }
+  margin-top: 90px;
+}
+.home_content {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  left: 78px;
+  transition: all 0.5s ease;
+  flex-grow: 1;
+  overflow-y: auto;
+}
 
-  .table-container {
-    overflow-x: auto;
-    width: 100%;
-  }
+.home_content .text {
+  font-size: 25px;
+  font-weight: 500;
+  color: #474d89;
+  margin: 12px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
 
-  .table-wrapper {
-    width: 100%;
-    max-width: 100%;
-  }
+.sidebar.active ~ .home_content {
+  left: 240px;
+  right: 0;
+}
+
+.modal {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.modal-dialog {
+  margin: 10% auto;
+  max-width: 500px;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  margin-bottom: 15px;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 24px;
+}
+
+.create-button {
+  margin: 20px;
+}
+.butcreate{
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.butinside{
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.buttab{
+  margin-right: 10px;
 }
 </style>

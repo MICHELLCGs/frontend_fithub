@@ -1,3 +1,4 @@
+
 <template>
      <div class="sidebar" :class="{ active: isSidebarOpen }">
         <div class="logo_content">
@@ -16,14 +17,14 @@
                 <span class="tooltip"> Dashboard</span>
             </li>
             <li>
-                <a href="#">
+                <a href="/gimnasiosadmin">
                     <i class="bi bi-clipboard"></i>
                     <span class="links_name"> Gimnasios</span>
                 </a>
                 <span class="tooltip"> Gimnasios</span>
             </li>
             <li>
-                <a href="#">
+                <a href="/planesadmin">
                     <i class="bi bi-calendar2-check"></i>
                     <span class="links_name"> Planes</span>
                 </a>
@@ -31,14 +32,14 @@
             </li>
             
             <li>
-                <a href="#">
+                <a href="/usuariosadmin">
                     <i class="bi bi-person"></i>
                     <span class="links_name"> Usuarios</span>
                 </a>
                 <span class="tooltip"> Usuarios</span>
             </li>
             <li>
-                <a href="#">
+                <a href="/pagosadmin">
                     <i class="bi bi-cash-stack"></i>
                     <span class="links_name"> Pagos</span>
                 </a>
@@ -46,7 +47,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="/configuracionadmin">
                     <i class="bi bi-gear"></i>
                     <span class="links_name"> Configuracion</span>
                 </a>
