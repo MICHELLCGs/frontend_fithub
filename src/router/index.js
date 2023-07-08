@@ -57,11 +57,15 @@ const routes = [
     name: "homeadmin",
     component: () => import("@/views/Auth/Admin/HomeAdmin.vue"),
   },
-  ,
   {
-    path: "/usuarios",
-    name: "usuarios",
-    component: () => import("@/views/Auth/Admin/Usuarios.vue"),
+    path: "/usuariosadmin",
+    name: "usuariosadmin",
+    component: () => import("@/views/Auth/Admin/AdminViews/Usuarios.vue"),
+  },
+  {
+    path: "/gimnasiosadmin",
+    name: "gimnasiosadmin",
+    component: () => import("@/views/Auth/Admin/AdminViews/Gimnasios.vue"),
   },
   {
     path: "/homeadmingym",
