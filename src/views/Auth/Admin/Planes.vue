@@ -15,9 +15,9 @@
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>COD. USUARIO</th>
-                  <th>FECHA</th>
-                  <th>NRO. DE OPERACIÓN</th>
+                  <th>NOMBRE</th>
+                  <th>DURACIÓN</th>
+                  <th>ETC</th>
                   <th>MONTO</th>
                   <th>ACCIONES</th>
                 </tr>
@@ -25,9 +25,9 @@
               <tbody>
                 <tr v-for="row in rows" :key="row.id">
                   <td>{{ row.id }}</td>
-                  <td>{{ row.cod_user }}</td>
-                  <td>{{ row.fecha }}</td>
-                  <td>{{ row.nro_operacion }}</td>
+                  <td>{{ row.nombre }}</td>
+                  <td>{{ row.duracion}}</td>
+                  <td>{{ row.etc }}</td>
                   <td>{{ row.monto }}</td>
                   <td>
                     <button
@@ -74,30 +74,30 @@
                 />
               </div>
               <div class="form-group">
-                <label for="cod_user">COD USUARIO</label>
+                <label for="nombre">NOMBRE</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="cod_user"
-                  v-model="editingRow.cod_user"
+                  id="nombre"
+                  v-model="editingRow.nombre"
                 />
               </div>
               <div class="form-group">
-                <label for="fecha">FECHA</label>
+                <label for="duracion">DURACIÓN</label>
                 <input
                   type="text"
                   class="form-control"
                   id="fecha"
-                  v-model="editingRow.fecha"
+                  v-model="editingRow.duracion"
                 />
               </div>
               <div class="form-group">
-                <label for="nro_operacion">NRO DE OPERACIÓN</label>
+                <label for="etc">ETC</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="mail"
-                  v-model="editingRow.nro_operacion"
+                  id="etc"
+                  v-model="editingRow.etc"
                 />
               </div>
               <div class="form-group">
@@ -124,8 +124,8 @@
         </div>
       </div>
     </div>
-    <div class="form-bg ">
-      <div class="container ">
+    <div class="form-bg">
+      <div class="container">
         <div class="row">
           <div class="col-md-offset-3 col-md-6 formtra">
             <form class="form-horizontal">
@@ -248,17 +248,10 @@ export default {
     return {
       rows: [
         {
-          id: "01",
-          cod_user: "1",
-          fecha: "4/4/2023",
-          nro_operacion: "33123123",
-          monto: "99.9",
-        },
-        {
-          id: "02",
-          cod_user: "2",
-          fecha: "4/5/2023",
-          nro_operacion: "245234532",
+          id: "101",
+          nombre: "FITPLAN",
+          duracion: "un mes",
+          etc: "etc",
           monto: "99.9",
         },
       ],
@@ -297,9 +290,9 @@ export default {
     createRow() {
       this.editingRow = {
         id: "",
-        cod_user: "",
-        fecha: "",
-        numero_operacion: "",
+        nombre: "",
+        duracion: "",
+        etc: "",
         monto: "",
       };
     },
@@ -404,7 +397,7 @@ form{
     font-family: 'Roboto', sans-serif;
 }
 .form-horizontal .header{
-    background: #3f9cb5;
+    background: #474d89;
     padding: 30px 25px;
     font-size: 30px;
     color: #fff;
@@ -414,7 +407,7 @@ form{
 }
 .form-horizontal .heading{
     font-size: 16px;
-    color: #3f9cb5;
+    color: #474d89;
     margin: 10px 0 20px 0;
     text-transform: capitalize;
 }
@@ -434,7 +427,7 @@ form{
     margin-bottom: 15px;
 }
 .form-horizontal .form-control:focus{
-    border-color: #3f9cb5;
+    border-color: #474d89;
     box-shadow: none;
 }
 .form-horizontal .control-label{
@@ -461,6 +454,6 @@ form{
 }
 .form-horizontal .btn:hover{
     background: #fff;
-    border-color: #3f9cb5;
+    border-color: #474d89;
 }
 </style>
