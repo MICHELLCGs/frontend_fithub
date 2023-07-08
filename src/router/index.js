@@ -92,6 +92,31 @@ const routes = [
     name: "homeadmingym",
     component: () => import("@/views/Auth/AdminGym/HomeAdminGym.vue"),
   },
+  {
+    path: "/planesadmingym",
+    name: "planesadmingym",
+    component: () => import("@/views/Auth/AdminGym/PlanesAdminGym.vue"),
+  },
+  {
+    path: "/usuariosadmingym",
+    name: "usuariosadmingym",
+    component: () => import("@/views/Auth/AdminGym/UsuariosAdminGym.vue"),
+  },
+  {
+    path: "/pagosadmingym",
+    name: "pagosadmingym",
+    component: () => import("@/views/Auth/AdminGym/PagosAdminGym.vue"),
+  },
+  {
+    path: "/registrosadmingym",
+    name: "registrosadmingym",
+    component: () => import("@/views/Auth/AdminGym/RegistrosAdminGym.vue"),
+  },
+  {
+    path: "/configadmingym",
+    name: "configadmingym",
+    component: () => import("@/views/Auth/AdminGym/ConfigAdminGym.vue"),
+  },
   //{ path: "*", component: PageNotFound },
 ];
 const router = createRouter({
