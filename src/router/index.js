@@ -1,28 +1,31 @@
 import { createRouter, createWebHistory } from "vue-router";
 import IndexView from "../views/IndexView.vue";
+import Login from "@/views/LoginView.vue";
 
 const routes = [
   {
     path: "/",
     name: "index",
-    component: IndexView,
-
+    component: IndexView
   },
   {
     path: "/login",
     name: "login",
-    component: () => import("@/components/LoginComp.vue"),
+    component: Login,//() => import("@/views/LoginView.vue"),
+    children:[
+      
+    ],
   },
   {
     path: "/register",
     name: "register",
-    component: () => import("@/components/RegisterComp.vue"),
+    component: () => import("@/views/RegisterView.vue"),
   },
+  
   {
-
     path: "/compra",
     name: "compra",
-    component: () => import("@/views/CompraView.vue"),
+    component: () => import("@/views/Payments/CompraView.vue"),
   },
   {
     path: "/homecustomer",
@@ -47,7 +50,7 @@ const routes = [
   {
     path: "/pay",
     name: "pay",
-    component: () => import("@/components/CompraComp.vue"),
+    component: () => import("@/views/Payments/MediosPagoView.vue"),
   },
   {
     path: "/homeadmin",

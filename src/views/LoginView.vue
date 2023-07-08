@@ -78,17 +78,17 @@
               >
             </div>
           </div>
-          <div ref="/home" class="input-group mb-3"> 
-            <button class="btn btn-lg btn-dark w-100 fs-6" >Login</button>
+          <div ref="/home" class="input-group mb-3">
+            <button class="btn btn-lg btn-dark w-100 fs-6">Login</button>
           </div>
           <div class="input-group mb-3">
             <!-- <button class="btn btn-lg btn-light w-100 fs-6">
-              <img
-                src="../assets/img/google.svg"
-                style="width: 20px"
-                class="me-2"
-              /><small>Inicia sesión con Google</small>
-            </button> -->
+                <img
+                  src="../assets/img/google.svg"
+                  style="width: 20px"
+                  class="me-2"
+                /><small>Inicia sesión con Google</small>
+              </button> -->
           </div>
           <div class="row">
             <small
@@ -104,16 +104,16 @@
     </div>
   </div>
 </template>
-<script>
-import HeaderComp from '@/components/HeaderComp.vue';
+  <script>
+import HeaderComp from "@/components/layout/headers/HeaderComp.vue";
 export default {
-    components() {
-        HeaderComp;
-    },
-    components: { HeaderComp }
+  components() {
+    HeaderComp;
+  },
+  components: { HeaderComp },
 };
 </script>
-<style>
+  <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 body {
@@ -139,11 +139,7 @@ body {
   border-radius: 30px;
 }
 
-
-
 @media only screen and (max-width: 40px) {
-
-
   .box-area {
     margin: 0 10px;
   }
@@ -156,3 +152,4 @@ body {
   }
 }
 </style>
+  

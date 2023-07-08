@@ -209,12 +209,21 @@
     </body>
 </template>
 <script>
-import HeaderComp from '@/components/HeaderComp.vue';
+import { useRouter } from 'vue-router';
+import HeaderComp from '@/components/layout/headers/HeaderComp.vue';
 export default {
     components() {
         HeaderComp;
     },
-    components: { HeaderComp }
+    components: { HeaderComp },
+    methods: {
+    navigateToLogin() {
+      this.$router.push({ name: 'login' });
+    },
+    navigateToRegister() {
+      this.$router.push({ name: 'register' });
+    }
+  }
 };
 
 </script>

@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <router-link :to="{ name: 'index' }">
         <a class="navbar-brand" href="#">
-          <img src="../assets/img/fithub.png" alt="Logo FitHub" style="height: 32px;">
+          <img src="@/assets/img/fithub.png" alt="Logo FitHub" style="height: 32px;">
         </a>
       </router-link>
       <ul class="nav nav-masthead justify-content-end nav-separator">
