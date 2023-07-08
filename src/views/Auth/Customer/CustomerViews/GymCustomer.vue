@@ -58,24 +58,59 @@
       </div>
     </nav>
 
+    <main class="container tab d-flex justify-content-center">
+      <div class="row featurette">
+        <div class="col-md-12 text-center align-items-center">
+          <h2 class="featurette-heading fw-normal lh-1" style="margin-top: 0">
+            <b>Busca gimnasios de tu preferencia</b>
+          </h2>
+        </div>
+        <div class="col-md-12">
+          <iframe
+            src="https://my.atlist.com/map/73f9ee8c-36c6-4f5f-88ff-8be30f81279d?share=true"
+            allow="geolocation 'self' https://my.atlist.com"
+            class="w-100"
+            style="height: 500px"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+
     <main role="main" class="container tab">
       <div class="card-container">
-        <div class="card" style="width: 18rem">
+        <div class="card red-border">
           <i class="bi bi-geo-alt-fill icon"></i>
           <div class="card-body">
-            <h5 class="card-title">Revo Sport</h5>
+            <h5 class="card-title">REVO SPORT</h5>
+            <div class="col-md-4">
+              <div class="profile-img">
+                <img
+                  src="https://lh3.googleusercontent.com/p/AF1QipPIuOp2x1MrH5llTlVA_ZsEhu0elX0gMsGHB0bN=s300-w300"
+                  alt=""
+                />
+              </div>
+            </div>
             <p class="card-text">
-              Revo Sport es un gimnasio que ofrece clases de ejercicio y
-              equipamiento de última generación. Es el más grande y mejor
-              equipado Club de Entrenamiento Deportivo en la ciudad de Arequipa.
+              Gimnasio que ofrece clases de ejercicio y equipamiento de última
+              generación. Es el más grande y mejor equipado Club de
+              Entrenamiento Deportivo en la ciudad de Arequipa.
             </p>
             <a href="#" class="btn btn-primary">Solicitar Asistencia</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
+        <div class="card blue-border">
           <i class="bi bi-geo-alt-fill icon"></i>
           <div class="card-body">
-            <h5 class="card-title">SmartFit</h5>
+            <h5 class="card-title">SMARTFIT</h5>
+            <div class="col-md-4">
+              <div class="profile-img">
+                <img
+                  src="https://gestion.pe/resizer/6PE7nFMZmPOwx1EyqEFHJm8B_kk=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/GFDIOSWCM5AHPD7AFLQZTGHDME.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
             <p class="card-text">
               Smartfit tiene el propósito de ofrecer fitness de alta calidad
               para todos, en un ambiente cómodo, seguro y con la mejor
@@ -84,40 +119,49 @@
             <a href="#" class="btn btn-primary">Solicitar Asistencia</a>
           </div>
         </div>
-        <div class="card" style="width: 18rem">
+        <div class="card blue-border">
           <i class="bi bi-geo-alt-fill icon"></i>
           <div class="card-body">
-            <h5 class="card-title">Millenium Fit</h5>
+            <h5 class="card-title">CLUB GYM</h5>
+            <div class="col-md-4">
+              <div class="profile-img">
+                <img
+                  src="https://i.ytimg.com/vi/_r59Yapbba8/maxresdefault.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
             <p class="card-text">
-                Contamos con amplios horarios y múltiples actividades. 
-                Musculación fitness entrenamiento funcional en todas sus variantes spinning pilates.
+              CLUB GYM esta ubicado en una zona estratégica de la ciudad de
+              Arequipa, el cual cuenta con instalacion.
+            </p>
+            <a href="#" class="btn btn-primary">Solicitar Asistencia</a>
+          </div>
+        </div>
+        <div class="card green-border">
+          <i class="bi bi-geo-alt-fill icon"></i>
+          <div class="card-body">
+            <h5 class="card-title">MILLENIUM FIT</h5>
+            <div class="col-md-4">
+              <div class="profile-img">
+                <img
+                  src="https://feelingperu.com/wp-content/uploads/2019/09/Millenium-Gym.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <p class="card-text">
+              Contamos con amplios horarios y múltiples actividades. Musculación
+              fitness entrenamiento funcional en todas sus variantes spinning
+              pilates.
             </p>
             <a href="#" class="btn btn-primary">Solicitar Asistencia</a>
           </div>
         </div>
       </div>
     </main>
-    <main>
-      <div class="row featurette">
-        <div class="col-md-12 text-center align-items-center">
-          <h2 class="featurette-heading fw-normal lh-1" style="margin-top: 0">
-            <b>Busca tus gimnasios</b>
-          </h2>
-          <p class="lead">Encuentra gimansios cerca de ti.</p>
-        </div>
-        <div class="col-md-12">
-          <iframe
-            src="https://my.atlist.com/map/73f9ee8c-36c6-4f5f-88ff-8be30f81279d?share=true"
-            allow="geolocation 'self' https://my.atlist.com"
-            class="w-100"
-            style="height: 600px"
-            frameborder="0"
 
-
-          ></iframe>
-        </div>
-      </div>
-    </main>
+    
   </div>
 </template>
   
@@ -212,10 +256,27 @@ body {
 }
 
 .icon {
-  font-size: 2rem;
+  font-size: 3rem;
   color: rgb(3, 30, 62);
 }
+.red-border {
+  border: 3px solid rgb(9, 34, 88);
+}
 
+.blue-border {
+  border: 3px solid rgb(9, 34, 88);
+}
 
+.green-border {
+  border: 3px solid rgb(9, 34, 88);
+}
+
+.profile-img {
+  text-align: center;
+}
+.profile-img img {
+  width: 300%;
+  height: 200%;
+}
 </style>
   

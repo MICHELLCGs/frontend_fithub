@@ -35,17 +35,22 @@ const routes = [
   {
     path: "/storecustomer",
     name: "storecustomer",
-    component: () => import("@/views/Auth/Customer/StoreCustomer.vue"),
+    component: () => import("@/views/Auth/Customer/CustomerViews/StoreCustomer.vue"),
   },
   {
     path: "/gymcustomer",
     name: "gymcustomer",
-    component: () => import("@/views/Auth/Customer/GymCustomer.vue"),
+    component: () => import("@/views/Auth/Customer/CustomerViews/GymCustomer.vue"),
   },
   {
     path: "/pagoscustomer",
     name: "pagoscustomer",
-    component: () => import("@/views/Auth/Customer/PagosCustomer.vue"),
+    component: () => import("@/views/Auth/Customer/CustomerViews/PagosCustomer.vue"),
+  },
+  {
+    path: "/configcustomer",
+    name: "configcustomer",
+    component: () => import("@/views/Auth/Customer/CustomerViews/ConfiguracionCustomer.vue"),
   },
   {
     path: "/pay",
