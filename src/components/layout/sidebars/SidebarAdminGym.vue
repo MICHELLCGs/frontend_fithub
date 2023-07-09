@@ -9,7 +9,7 @@
         </div>
         <ul class="nav_list">
             <li>
-                <a href="href=/homeadmingym">
+                <a href="/homeadmingym">
                     <i class="bi bi-grid"></i>
                     <span class="links_name"> Dashboard</span>
                 </a>
