@@ -203,7 +203,7 @@
                 <div class="grupo-1">
                     <div class="box">
                         <figure>
-                            <a href="">
+                            <a href="#">
                                 <img src="@/assets/img/fitnom2.svg" alt="">
                             </a>
                         </figure>
@@ -478,7 +478,7 @@ export default {
 }
 
 .pie-pagina .grupo-1 .red-social a:hover {
-    color: #d9e5f5;
+    color: #b5cae6;
 }
 
 .pie-pagina .grupo-2 {

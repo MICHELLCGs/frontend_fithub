@@ -9,42 +9,42 @@
         </div>
         <ul class="nav_list">
             <li>
-                <a href="#">
+                <a href="href=/homeadmingym">
                     <i class="bi bi-grid"></i>
                     <span class="links_name"> Dashboard</span>
                 </a>
                 <span class="tooltip"> Dashboard</span>
             </li>
             <li>
-                <a href="#">
+                <a href="/planesadmingym">
                     <i class="bi bi-clipboard"></i>
                     <span class="links_name"> Planes</span>
                 </a>
                 <span class="tooltip"> Planes</span>
             </li>
             <li>
-                <a href="#">
+                <a href="/usuariosadmingym">
                     <i class="bi bi-person"></i>
                     <span class="links_name"> Usuarios</span>
                 </a>
                 <span class="tooltip"> Usuarios</span>
             </li>
             <li>
-                <a href="#">
+                <a href="pagosadmingym">
                     <i class="bi bi-cash-stack"></i>
                     <span class="links_name"> Pagos</span>
                 </a>
                 <span class="tooltip"> Pagos</span>
             </li>
             <li>
-                <a href="#">
+                <a href="/registrosadmingym">
                     <i class="bi bi-calendar2-check"></i>
                     <span class="links_name"> Registros</span>
                 </a>
                 <span class="tooltip"> Registros</span>
             </li>
             <li>
-                <a href="#">
+                <a href="/configadmingym">
                     <i class="bi bi-gear"></i>
                     <span class="links_name"> Configuracion</span>
                 </a>
