@@ -362,7 +362,6 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 85px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -378,6 +377,8 @@ export default {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
     text-align: center;
     transition: all 0.5s ease;
+    border-radius: 25px;
+
 }
 
 .title .bi {
