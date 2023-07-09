@@ -58,6 +58,7 @@
               </div> -->
           <div class="input-group mb-3">
             <input
+              v-model="email"
               type="text"
               class="form-control form-control-lg bg-light fs-6"
               placeholder="Correo electrónico"
@@ -65,6 +66,7 @@
           </div>
           <div class="input-group mb-3">
             <input
+              v-model="numeroDNI"
               type="number"
               class="form-control form-control-lg bg-light fs-6"
               placeholder="DNI"
@@ -91,6 +93,7 @@
               class="btn btn-lg btn-dark w-100 fs-6"
               data-bs-toggle="modal"
               data-bs-target="#modelregister"
+              @click="consultarAPI"
             >
               Register
             </button>
@@ -117,8 +120,10 @@
       </div>
     </div>
   </div>
+  <!-- MODAL VALIDAR DATOS-->
   <div
     class="modal fade"
+    data-bs-backdrop="static"
     id="modelregister"
     tabindex="-1"
     aria-labelledby="modelregisterlabel"
@@ -127,7 +132,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modelregisterlabel">AVISO</h5>
+          <h5 class="modal-title" id="modelregisterlabel">VALIDANDO USUARIO</h5>
           <button
             type="button"
             class="btn-close"
@@ -136,7 +141,43 @@
           ></button>
         </div>
         <div class="modal-body">
-          Eres NOMBRE_USUARIO APELLIDOUSUARIO con el número de DNI NUMERODEDNI.
+          <h6 class="text-center">DATOS DE REGISTRO</h6>
+          <span>EMAIL:</span>
+          <div class="input-group mb-3">
+            <input
+              type="email"
+              class="form-control form-control-lg bg-light fs-6"
+              :placeholder="emailPlaceholder"
+              disabled
+            />
+          </div>
+          <span>DNI:</span>
+          <div class="input-group mb-3">
+            <input
+              type="number"
+              class="form-control form-control-lg bg-light fs-6"
+              :placeholder="dniPlaceholder"
+              disabled
+            />
+          </div>
+          <span>Nombres:</span>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control form-control-lg bg-light fs-6"
+              :placeholder="nombrePlaceholder"
+              disabled
+            />
+          </div>
+          <span>Apellidos:</span>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control form-control-lg bg-light fs-6"
+              :placeholder="apellidosPlaceholder"
+              disabled
+            />
+          </div>
         </div>
         <div class="modal-footer">
           <button
@@ -152,16 +193,68 @@
     </div>
   </div>
 </template>
-  <script>
+
+<script>
+import { ref } from "vue";
 import HeaderComp from "@/components/layout/headers/HeaderComp.vue";
 export default {
   components() {
     HeaderComp;
   },
   components: { HeaderComp },
+  data() {
+    return {
+      email: "",
+      numeroDNI: "",
+    };
+  },
+  computed: {
+    emailPlaceholder() {
+      return this.email;
+    },
+    dniPlaceholder() {
+      return this.numeroDNI;
+    },
+    nombrePlaceholder(){
+        if (this.resultado) {
+        return this.resultado.nombres;
+      } else {
+        return '';
+      }
+    },
+    apellidosPlaceholder(){
+        if (this.resultado) {
+        return `${this.resultado.apellidoPaterno} ${this.resultado.apellidoMaterno}`;
+      } else {
+        return '';
+      }
+    }
+  },
+  methods: {
+    async consultarAPI() {
+      try {
+        const response = await fetch(`https://api.apis.net.pe/v1/dni?numero=${this.numeroDNI}`);
+        const data = await response.json();
+
+        // Verificamos si la respuesta fue exitosa y tiene los datos requeridos
+        if (response.ok && data.success) {
+          this.resultado = {
+            apellidoPaterno: data.apellidoPaterno,
+            apellidoMaterno: data.apellidoMaterno,
+            nombres: data.nombres,
+          };
+        } else {
+          console.error('No se pudo obtener la información del DNI');
+        }
+      } catch (error) {
+        console.error('Ocurrió un error al hacer la solicitud:', error);
+      }
+    },
+  },
 };
 </script>
-  <style>
+
+<style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 body {
