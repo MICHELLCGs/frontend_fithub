@@ -154,7 +154,7 @@
   
   import SidebarAdmin from "@/components/layout/sidebars/SidebarAdmin.vue";
   export default {
-    name: "Gimnasios",
+    name: "Pagos",
     components: {
       SidebarAdmin,
     },

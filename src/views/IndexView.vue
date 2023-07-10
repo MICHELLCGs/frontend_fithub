@@ -143,7 +143,7 @@
                         <h2 class="featurette-heading fw-normal lh-1" style="margin-top: 0">
                             <b>Busca tus gimnasios</b>
                         </h2>
-                        <p class="lead">Encuentra gimansios cerca de ti.</p>
+                        <p class="lead">Encuentra gimnasios cerca de ti.</p>
                     </div>
                     <div class="col-md-12">
                         <iframe src="https://my.atlist.com/map/73f9ee8c-36c6-4f5f-88ff-8be30f81279d?share=true" allow="geolocation 'self' https://my.atlist.com" width="100%" height="400px" frameborder="0" scrolling="no" allowfullscreen></iframe>

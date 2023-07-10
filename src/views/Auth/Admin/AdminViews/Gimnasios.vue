@@ -1,13 +1,15 @@
 <template>
   <SidebarAdmin />
   <div class="home_content">
-    <div class="create-button">
-      <button class="btn btn-dark butcreate" @click="createRow">Crear Registro</button>
-    </div>
     <main role="main" class="container tab">
       <div class="row">
         <div class="col-12">
-          <h1>Tabla Gimnasios</h1>
+          <h1 style="display: flex; align-items: center;">
+  Tabla Gimnasios
+  <div style="margin-left: 480px;" class="create-button">
+    <button class="btn btn-dark butcreate" @click="createRow">Crear Registro</button>
+  </div>
+</h1>
           <div class="table-responsive">
             <table class="table table-bordered" style="margin-bottom: 100px">
               <thead>
@@ -159,6 +161,7 @@ export default {
   */
   .tab {
   margin-top: 90px;
+  background-color: white;
 }
 .home_content {
   position: absolute;

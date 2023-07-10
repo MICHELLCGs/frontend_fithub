@@ -8,18 +8,17 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
     crossorigin="anonymous"
   />
-  <HeaderComp />
   <div
-    class="container d-flex justify-content-center align-items-center min-vh-100 bloq"
+    class="container d-flex justify-content-center align-items-center min-vh-100"
   >
-    <div class="row border rounded-5 p-3 bg-white shadow box-area ">
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
       <div
         class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
         style="background: #89bbcb"
       >
         <div class="featured-image mb-3">
           <img
-            src="../assets/img/regis.svg"
+            src="../assets/img/negocio.svg"
             class="img-fluid"
             style="width: 250px"
           />
@@ -31,7 +30,7 @@
             font-weight: 700;
           "
         >
-          Ejercitate
+          Beneficiate
         </p>
         <small
           class="text-white text-wrap text-center"
@@ -39,7 +38,7 @@
             width: 17rem;
             font-family: 'Courier New', 'Courier', 'monospace';
           "
-          >Busca y encuentra tu gimnasio preferido</small
+          >Empieza a trabajar con nosotros</small
         >
       </div>
 
@@ -47,20 +46,13 @@
         <div class="row align-items-center">
           <div class="header-text mb-4 text-center">
             <h1>Bienvenido</h1>
-            <p>Registrate y conoce una vida saludable</p>
+            <p>Registrate y aprovecha nuestros servicios</p>
           </div>
-          <!-- <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control form-control-lg bg-light fs-6"
-                  placeholder="Nombre"
-                />
-              </div> -->
           <div class="input-group mb-3">
             <input
               type="text"
               class="form-control form-control-lg bg-light fs-6"
-              placeholder="Correo electrónico"
+              placeholder="Mail"
             />
           </div>
           <div class="input-group mb-3">
@@ -77,43 +69,40 @@
               placeholder="Contraseña"
             />
           </div>
-          <div class="input-group mb-4">
+          <div class="input-group mb-3">
             <input
               type="password"
               class="form-control form-control-lg bg-light fs-6"
-              placeholder="Confirmar contraseña"
+              placeholder="Confirma contraseña"
             />
           </div>
 
-          <div class="input-group mb-3">
+          <div class="input-group mb-1">
             <button
               type="button"
               class="btn btn-lg btn-dark w-100 fs-6"
               data-bs-toggle="modal"
               data-bs-target="#modelregister"
             >
-              Registrarse
+              Registrar tu gimnasio
             </button>
           </div>
+
+
           <div class="input-group mb-3">
             <!-- <button class="btn btn-lg btn-light w-100 fs-6">
-                  <img
-                    src="../assets/img/google.svg"
-                    style="width: 20px"
-                    class="me-2"
-                  /><small>Registrate con Google</small>
-                </button> -->
+                    <img
+                      src="../assets/img/google.svg"
+                      style="width: 20px"
+                      class="me-2"
+                    /><small>Registrate con Google</small>
+                  </button> -->
           </div>
-          <div class="row">
-            <small
-              >¿Ya estás registrado? &nbsp; &nbsp;<a
-                href="/login"
-                class="link-secondary"
-                >Log in
-              </a></small
-            >
-          </div>
+          <div class="mb-3">
+    <button type="button" class="btn btn-lg btn-light w-100 fs-6" @click="cancelar">Cancelar</button>
+  </div>
         </div>
+        
       </div>
     </div>
   </div>
@@ -127,7 +116,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modelregisterlabel">AVISO</h5>
+          <h5 class="modal-title" id="modelregisterlabel">Registro gimnasio</h5>
           <button
             type="button"
             class="btn-close"
@@ -136,7 +125,49 @@
           ></button>
         </div>
         <div class="modal-body">
-          Eres NOMBRE_USUARIO APELLIDOUSUARIO con el número de DNI NUMERODEDNI.
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control form-control-lg bg-light fs-6"
+              placeholder="Nombre"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="file"
+              class="form-control form-control-lg bg-light fs-6 custom-file-input"
+              placeholder="Logo"
+              accept="image/*"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control form-control-lg bg-light fs-6"
+              placeholder="Geolocalización"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="number"
+              class="form-control form-control-lg bg-light fs-6"
+              placeholder="RUC"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="number"
+              class="form-control form-control-lg bg-light fs-6"
+              placeholder="Aforo"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control form-control-lg bg-light fs-6"
+              placeholder="Horarios de atención"
+            />
+          </div>
         </div>
         <div class="modal-footer">
           <button
@@ -152,28 +183,27 @@
     </div>
   </div>
 </template>
-  <script>
-import HeaderComp from "@/components/layout/headers/HeaderComp.vue";
+<script>
 export default {
-  components() {
-    HeaderComp;
+  methods: {
+    cancelar() {
+      window.location.href = "/";
+    },
   },
-  components: { HeaderComp },
 };
 </script>
-  <style>
+<style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 body {
   font-family: "Poppins", sans-serif;
   background: #ececec;
 }
+
 .box-area {
   width: 930px;
 }
-.bloq{
-  margin-top: 35px;
-}
+
 .right-box {
   padding: 40px 30px 40px 40px;
 }
@@ -188,7 +218,30 @@ body {
 .rounded-5 {
   border-radius: 30px;
 }
-
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: "Seleccionar logo";
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 100;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: #99757d;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
 @media only screen and (max-width: 40px) {
   .box-area {
     margin: 0 10px;
@@ -202,4 +255,3 @@ body {
   }
 }
 </style>
-  
