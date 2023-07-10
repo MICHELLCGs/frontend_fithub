@@ -25,7 +25,7 @@
                                     <p>Muchos gimnasios a tu disposición de tu preferencia.</p>
                                 </div>
                                 <p>
-                                    <a class="btn btn-lg btn-light" href="#"><span class="dir-secciones">Ver gimnasios
+                                    <a class="btn btn-lg btn-light" href="#seccion3"><span class="dir-secciones">Ver gimnasios
                                             <i id="flecha" class="bi bi-arrow-right"></i>
                                         </span>
                                     </a>
@@ -47,7 +47,7 @@
                                     <p>FitPlan se enfoca en tu comodidad.</p>
                                 </div>
                                 <p>
-                                    <a class="btn btn-lg btn-light" href="#"><span class="dir-secciones">Ver FitPlan
+                                    <a class="btn btn-lg btn-light" href="#seccion4"><span class="dir-secciones">Ver FitPlan
                                             <i id="flecha" class="bi bi-arrow-right"></i>
                                         </span>
                                     </a>
@@ -59,7 +59,7 @@
                         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
                             <rect width="100%" height="100%" fill="#777" />
-                            <image xlink:href="@/assets/img/dirimg.svg" style="width: 100%;"/>
+                            <image xlink:href="@/assets/img/dirimg.svg" style="width: 100%;" />
                         </svg>
 
                         <div class="container">
@@ -69,7 +69,7 @@
                                     <p>Fomentamos el bienestar mediante el uso de tecnología.</p>
                                 </div>
                                 <p>
-                                    <a class="btn btn-lg btn-light" href="#">
+                                    <a class="btn btn-lg btn-light" href="#seccion2">
                                         <span class="dir-secciones">Sobre Nosotros
                                             <i id="flecha" class="bi bi-arrow-right"></i>
                                         </span>
@@ -95,7 +95,7 @@
 
             <div class="container marketing">
                 <!-- START THE FEATURETTES -->
-                <div class="row featurette">
+                <div class="row featurette" >
                     <div class="col-md-7">
                         <h2 class="featurette-heading fw-normal lh-1">
                             <b>¿Qué es FitHub?</b>
@@ -114,7 +114,7 @@
                     </div>
                 </div>
 
-                <hr class="featurette-divider" />
+                <hr class="featurette-divider" id="seccion2"/>
 
                 <div class="row featurette">
                     <div class="col-md-7 order-md-2">
@@ -132,11 +132,11 @@
                     </div>
                     <div class="col-md-5 order-md-1">
                         <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                            src="@/assets/img/sec2.png" alt="Seccion1"/>
+                            src="@/assets/img/sec2.png" alt="Seccion1" />
                     </div>
                 </div>
 
-                <hr class="featurette-divider" />
+                <hr class="featurette-divider" id="seccion3"/>
 
                 <div class="row featurette">
                     <div class="col-md-12 text-center align-items-center">
@@ -146,11 +146,13 @@
                         <p class="lead">Encuentra gimnasios cerca de ti.</p>
                     </div>
                     <div class="col-md-12">
-                        <iframe src="https://my.atlist.com/map/73f9ee8c-36c6-4f5f-88ff-8be30f81279d?share=true" allow="geolocation 'self' https://my.atlist.com" width="100%" height="400px" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                        <iframe src="https://my.atlist.com/map/73f9ee8c-36c6-4f5f-88ff-8be30f81279d?share=true"
+                            allow="geolocation 'self' https://my.atlist.com" width="100%" height="400px" frameborder="0"
+                            scrolling="no" allowfullscreen></iframe>
                     </div>
                 </div>
 
-                <hr class="featurette-divider" />
+                <hr class="featurette-divider" id="seccion4"/>
 
                 <div class="row featurette">
                     <div class="col-md-12 text-center align-items-center">
@@ -163,8 +165,8 @@
                         </p>
                     </div>
                     <div class="col-md-6 d-flex offset-md-3 custom-div">
-                        <div class="cards">
-                            <div class="card">
+                        <div class="tarjetas">
+                            <div class="tarjeta">
                                 <div class="title">
                                     <div class="circle"></div>
                                     <i class="bi bi-lightning-charge-fill"></i>
@@ -192,38 +194,71 @@
                         </div>
                     </div>
                 </div>
-
-                <hr class="featurette-divider" />
                 <!-- /END THE FEATURETTES -->
             </div>
             <!-- /.container -->
 
             <!-- FOOTER -->
-            <footer class="container">
-                <p>
-                    &copy; 2023, FitHub &middot;
-                    <a href="#">Documentación</a> &middot; <a href="#">Repositorio</a>
-                </p>
+            <footer class="pie-pagina">
+                <div class="grupo-1">
+                    <div class="box">
+                        <figure>
+                            <a href="#">
+                                <img src="@/assets/img/fitnom2.svg" alt="">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="box">
+                        <h2>Sobre Nosotros</h2>
+                        <a href="#seccion1" style="text-decoration: none;"><p>¿Qué es FitHub?</p></a>
+                        <p>Repositorio</p>
+                        <p>Documentación</p>
+                    </div>
+                    <div class="box">
+                        <h2>Contáctanos</h2>
+                        <router-link to="/partners" style="text-decoration: none;">
+                            <p>Para Partners</p>
+                        </router-link>
+                        <p>Saber más</p>
+                    </div>
+                    <div class="box">
+                        <h2>¿Ya nos sigues?</h2>
+                        <div class="red-social">
+                            <a href="#"><i class="bi bi-facebook"></i> </a>
+                            <a href="#"><i class="bi bi-instagram"></i> </a>
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                            <a href="https://github.com/MICHELLCGs/frontend_fithub.git" target="_blank"><i
+                                    class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grupo-2">
+                    <small> &copy; 2023 <b>FitHub</b> - Todos los Derechos Reservados.</small>
+                </div>
             </footer>
         </main>
+        <!--<FooterComp/>-->
     </body>
 </template>
 <script>
 import { useRouter } from 'vue-router';
 import HeaderComp from '@/components/layout/headers/HeaderComp.vue';
+import FooterComp from '@/components/layout/footers/FooterIndex.vue';
+
 export default {
     components() {
         HeaderComp;
+        FooterComp;
     },
     components: { HeaderComp },
     methods: {
-    navigateToLogin() {
-      this.$router.push({ name: 'login' });
-    },
-    navigateToRegister() {
-      this.$router.push({ name: 'register' });
+        navigateToLogin() {
+            this.$router.push({ name: 'login' });
+        },
+        navigateToRegister() {
+            this.$router.push({ name: 'register' });
+        }
     }
-  }
 };
 
 </script>
@@ -323,11 +358,10 @@ export default {
     border-radius: 80px;
 }
 
-.cards {
+.tarjetas {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 85px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -335,7 +369,7 @@ export default {
     justify-content: center;
 }
 
-.card {
+.tarjeta {
     width: auto;
     margin: 25px;
     padding: 40px 20px;
@@ -343,6 +377,8 @@ export default {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
     text-align: center;
     transition: all 0.5s ease;
+    border-radius: 25px;
+
 }
 
 .title .bi {
@@ -384,7 +420,76 @@ export default {
     text-decoration: none;
 }
 
-.card:hover {
+.tarjeta:hover {
     transform: scale(1.05);
+}
+
+/*pie de pagina*/
+.pie-pagina {
+    margin-top: 3.5rem;
+    width: 100%;
+    background-color: #4D4443;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box img {
+    width: 200px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 13px;
+    background-color: #72615F;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: #b5cae6;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #62504E;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
 }
 </style>

@@ -28,6 +28,11 @@ const routes = [
     component: () => import("@/views/Payments/CompraView.vue"),
   },
   {
+    path: "/partners",
+    name: "partners",
+    component: () => import("@/views/PartnersView.vue"),
+  },
+  {
     path: "/homecustomer",
     name: "homecustomer",
     component: () => import("@/views/Auth/Customer/HomeCustomer.vue"),
@@ -35,17 +40,22 @@ const routes = [
   {
     path: "/storecustomer",
     name: "storecustomer",
-    component: () => import("@/views/Auth/Customer/StoreCustomer.vue"),
+    component: () => import("@/views/Auth/Customer/CustomerViews/StoreCustomer.vue"),
   },
   {
     path: "/gymcustomer",
     name: "gymcustomer",
-    component: () => import("@/views/Auth/Customer/GymCustomer.vue"),
+    component: () => import("@/views/Auth/Customer/CustomerViews/GymCustomer.vue"),
   },
   {
     path: "/pagoscustomer",
     name: "pagoscustomer",
-    component: () => import("@/views/Auth/Customer/PagosCustomer.vue"),
+    component: () => import("@/views/Auth/Customer/CustomerViews/PagosCustomer.vue"),
+  },
+  {
+    path: "/configcustomer",
+    name: "configcustomer",
+    component: () => import("@/views/Auth/Customer/CustomerViews/ConfiguracionCustomer.vue"),
   },
   {
     path: "/pay",
@@ -88,9 +98,39 @@ const routes = [
     component: () => import("@/views/Auth/AdminGym/HomeAdminGym.vue"),
   },
   {
+    path: "/partnersregis",
+    name: "partnersregis",
+    component: () => import("@/views/Registerpartners.vue"),
+  },
+  {
     path: "/partners",
     name: "partners",
-    component: () => import("@/views/Registerpartners.vue"),
+    component: () => import("@/views/PartnersView.vue"),
+  },
+{
+    path: "/planesadmingym",
+    name: "planesadmingym",
+    component: () => import("@/views/Auth/AdminGym/PlanesAdminGym.vue"),
+  },
+  {
+    path: "/usuariosadmingym",
+    name: "usuariosadmingym",
+    component: () => import("@/views/Auth/AdminGym/UsuariosAdminGym.vue"),
+  },
+  {
+    path: "/pagosadmingym",
+    name: "pagosadmingym",
+    component: () => import("@/views/Auth/AdminGym/PagosAdminGym.vue"),
+  },
+  {
+    path: "/registrosadmingym",
+    name: "registrosadmingym",
+    component: () => import("@/views/Auth/AdminGym/RegistrosAdminGym.vue"),
+  },
+  {
+    path: "/configadmingym",
+    name: "configadmingym",
+    component: () => import("@/views/Auth/AdminGym/ConfigAdminGym.vue"),
   },
   //{ path: "*", component: PageNotFound },
 ];

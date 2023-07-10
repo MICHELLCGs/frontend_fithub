@@ -49,12 +49,7 @@
       </li>
 
       <li >
-        <a
-        class="btn custom-btn d-flex align-left"
-          data-bs-toggle="modal"
-          href="#exampleModalToggle"
-          role="button"
-        >
+        <a href="/configcustomer">
           <i class="bi bi-gear"></i>
           <span class="links_name"> Configuracion</span>
         </a>
@@ -71,58 +66,6 @@
           </div>
         </div>
         <i class="bi bi-box-arrow-left" id="log_out"></i>
-      </div>
-    </div>
-  </div>
-
-  
-
-  <div>
-    <div
-      class="modal fade"
-      id="exampleModalToggle"
-      aria-hidden="true"
-      aria-labelledby="exampleModalToggleLabel"
-      tabindex="-1"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <body>
-            <div class="profile-container">
-              <h1>Tu Perfil</h1>
-              <div class="profile-form">
-                <label for="name">Nombres:</label>
-                <input type="text" id="name" value="Your Name" readonly />
-              </div>
-              <div class="profile-form">
-                <label for="name">Correo Electronico:</label>
-                <input
-                  type="text"
-                  id="correo"
-                  value="yourname@gmail.com"
-                  readonly
-                />
-              </div>
-              <div class="profile-form">
-                <label for="name">Celular:</label>
-                <input type="text" id="celular" value="xxx-xxx-xxx" readonly />
-              </div>
-              <div class="profile-form">
-                <label for="name">Contraseña:</label>
-                <input type="text" id="contraseña" value="xxxxxxxxx" readonly />
-              </div>
-            </div>
-          </body>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Guardar
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   </div>
