@@ -27,6 +27,7 @@
                     <th>FECHA</th>
                     <th>NRO. DE OPERACIÓN</th>
                     <th>MONTO</th>
+                    <th>VOUCHER</th>
                     <th>ESTADO</th>
                     <th>ACCIONES</th>
                   </tr>
@@ -38,6 +39,7 @@
                     <td>{{ row.fecha }}</td>
                     <td>{{ row.nro_operacion }}</td>
                     <td>{{ row.monto }}</td>
+                    <td>{{ row.voucher }}</td>
                     <td>{{ row.estado }}</td>
                     <td>
                       <button
@@ -120,6 +122,15 @@
                   />
                 </div>
                 <div class="form-group">
+                  <label for="monto">VOUCHER</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="voucher"
+                    v-model="editingRow.voucher"
+                  />
+                </div>
+                <div class="form-group">
                   <label for="estado">ESTADO</label>
                   <select
                     class="form-control"
@@ -167,6 +178,7 @@
             fecha: "3/07/2023",
             nro_operacion: "764356",
             monto: "109.90",
+            voucher: "381278379129873",
             estado: "activo",
           },
           {
@@ -175,6 +187,7 @@
             fecha: "10/06/2023",
             nro_operacion: "768456",
             monto: "109.90",
+            voucher: "381278379129346",
             estado: "no-activo",
           },
         ],
@@ -226,7 +239,8 @@
           fecha: "",
           nro_operacion: "",
           monto: "",
-          estado: "activo",
+          voucher: "",
+          estado: "no-activo",
         };
       },
     },

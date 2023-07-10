@@ -132,14 +132,14 @@
               placeholder="Nombre"
             />
           </div>
-          <div class="input-group mb-3">
+          <!-- <div class="input-group mb-3">
             <input
               type="file"
               class="form-control form-control-lg bg-light fs-6 custom-file-input"
               placeholder="Logo"
               accept="image/*"
             />
-          </div>
+          </div> -->
           <div class="input-group mb-3">
             <input
               type="text"

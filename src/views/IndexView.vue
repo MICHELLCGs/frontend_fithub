@@ -170,10 +170,10 @@
                                 <div class="title">
                                     <div class="circle"></div>
                                     <i class="bi bi-lightning-charge-fill"></i>
-                                    <h2>FitPlan</h2>
+                                    <h2>{{ plan.name }}</h2>
                                 </div>
                                 <div class="price">
-                                    <h4><sup> S/. </sup> 89.99</h4>
+                                    <h4><sup> S/. </sup> {{ plan.preci }}</h4>
                                 </div>
                                 <div class="option">
                                     <ul>
@@ -245,10 +245,12 @@ import { useRouter } from 'vue-router';
 import HeaderComp from '@/components/layout/headers/HeaderComp.vue';
 import FooterComp from '@/components/layout/footers/FooterIndex.vue';
 
+import axios from 'axios';
 export default {
     components() {
         HeaderComp;
         FooterComp;
+        
     },
     components: { HeaderComp },
     methods: {
@@ -258,7 +260,29 @@ export default {
         navigateToRegister() {
             this.$router.push({ name: 'register' });
         }
-    }
+    },
+    data() {
+    return {
+      plan: {},
+    };
+  },
+  mounted() {
+    this.fetchPlan();
+  },
+  methods: {
+    fetchPlan() {
+      axios.get('http://localhost:8000/api/v1/planes')
+        .then(response => {
+          if (response.data.data.length > 0) {
+            this.plan = response.data.data[0];
+          }
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    },
+  },
+
 };
 
 </script>
