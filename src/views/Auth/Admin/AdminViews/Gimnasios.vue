@@ -4,34 +4,47 @@
     <main role="main" class="container tab">
       <div class="row">
         <div class="col-12">
-          <h1 style="display: flex; align-items: center;">
-  Tabla Gimnasios
-  <div style="margin-left: 480px;" class="create-button">
-    <button class="btn btn-dark butcreate" @click="createRow">Crear Registro</button>
-  </div>
-</h1>
+          <h1 style="display: flex; align-items: center">
+            Tabla Gimnasios
+            <div style="margin-left: 480px" class="create-button">
+              <button class="btn btn-dark butcreate" @click="createRow">
+                Crear Registro
+              </button>
+            </div>
+          </h1>
           <div class="table-responsive">
             <table class="table table-bordered" style="margin-bottom: 100px">
               <thead>
                 <tr>
                   <th>ID</th>
                   <th>NOMBRE</th>
-                  <th>MAIL</th>
-                  <th>UBICACIÓN</th>
-                  <th>CAPACIDAD</th>
-                  <th>ACCIONES</th>
+                  <th>GEOLOCALIZACIÓN</th>
+                  <th>RUC</th>
+                  <th>AFORO</th>
+                  <th>HORARIO DE ATENCIÓN</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="row in rows" :key="row.id">
-                  <td>{{ row.id }}</td>
+                  <td>{{ row._id }}</td>
                   <td>{{ row.nombre }}</td>
-                  <td>{{ row.mail }}</td>
-                  <td>{{ row.ubicacion }}</td>
-                  <td>{{ row.capacidad }}</td>
+                  <td>{{ row.geolocalizacion}}</td>
+                  <td>{{ row.ruc }}</td>
+                  <td>{{ row.aforo }}</td>
+                  <td>{{ row.horarios_atencion }}</td>
                   <td>
-                    <button class="btn btn-success buttab" @click="editRow(row.id)">Editar</button>
-                    <button class="btn btn-danger buttab" @click="deleteRow(row.id)">Borrar</button>
+                    <button
+                      class="btn btn-success buttab"
+                      @click="editRow(row._id)"
+                    >
+                      Editar
+                    </button>
+                    <button
+                      class="btn btn-danger buttab"
+                      @click="deleteRow(row._id)"
+                    >
+                      Borrar
+                    </button>
                   </td>
                 </tr>
               </tbody>
@@ -44,7 +57,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">{{ editingRow ? 'Crear Registro' : 'Editar Registro' }}</h5>
+            <h5 class="modal-title">
+              {{ editingRow ? "Crear Registro" : "Editar Registro" }}
+            </h5>
             <button type="button" class="btn-close" @click="cancelEdit">
               <span></span>
             </button>
@@ -53,40 +68,83 @@
             <form @submit.prevent="saveChanges">
               <div class="form-group">
                 <label for="id">ID</label>
-                <input type="text" class="form-control" id="id" v-model="editingRow.id" disabled>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="id"
+                  v-model="editingRow._id"
+                  disabled
+                />
               </div>
               <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" v-model="editingRow.nombre">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  v-model="editingRow.nombre"
+                />
               </div>
               <div class="form-group">
-                <label for="mail">mail</label>
-                <input type="text" class="form-control" id="mail" v-model="editingRow.mail">
+                <label for="geolocalizacion">Geolocalización</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="geolocalizacion"
+                  v-model="editingRow.geolocalizacion"
+                />
               </div>
               <div class="form-group">
-                <label for="ubicacion">ubicacion</label>
-                <input type="text" class="form-control" id="ubicacion" v-model="editingRow.ubicacion">
+                <label for="ruc">RUC</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="ruc"
+                  v-model="editingRow.ruc"
+                />
               </div>
               <div class="form-group">
-                <label for="capacidad">Capacidad</label>
-                <input type="text" class="form-control" id="capacidad" v-model="editingRow.capacidad">
+                <label for="aforo">Aforo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="aforo"
+                  v-model="editingRow.aforo"
+                />
               </div>
-              <button type="submit" class="btn btn-primary butinside">{{ editingRow ? 'Guardar Cambios' : 'Crear' }}</button>
-              <button type="button" class="btn btn-secondary butinside" @click="cancelEdit">Cancelar</button>
+              <div class="form-group">
+                <label for="horarios_atencion">Horarios de atención</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="horarios_atencion"
+                  v-model="editingRow.horarios_atencion"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary butinside">
+                {{ editingRow ? "Guardar Cambios" : "Crear" }}
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary butinside"
+                @click="cancelEdit"
+              >
+                Cancelar
+              </button>
             </form>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa el CSS de Bootstrap
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Importa el JavaScript de Bootstrap
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import SidebarAdmin from "@/components/layout/sidebars/SidebarAdmin.vue";
+import axios from "axios";
+
 export default {
   name: "Gimnasios",
   components: {
@@ -94,48 +152,49 @@ export default {
   },
   data() {
     return {
-      rows: [
-        {
-          id: "001",
-          nombre: "Olimpo",
-          mail: "example@mail.com",
-          ubicacion: "Arequipa",
-          capacidad: "40",
-        },
-        {
-          id: "002",
-          nombre: "Thalia",
-          mail: "example@mail.com",
-          ubicacion: "Arequipa",
-          capacidad: "40",
-        },
-      ],
+      rows: [],
       editingRow: null,
     };
   },
+  mounted() {
+    this.fetchRows();
+  },
   methods: {
+    fetchRows() {
+      axios.get("http://localhost:8000/api/v1/gimnasios/").then((response) => {
+        this.rows = response.data.data;
+      });
+    },
     editRow(id) {
-      // Obtener los datos del registro correspondiente al ID
-      // Puedes realizar una petición a tu API o trabajar con datos simulados
-      // Aquí se utiliza el array "rows" para buscar el registro
-      const rowData = this.rows.find(row => row.id === id);
+      const rowData = this.rows.find((row) => row._id === id);
       this.editingRow = { ...rowData };
     },
     deleteRow(id) {
-      // Aquí puedes realizar una petición a tu API para borrar el registro correspondiente al ID
-      // Por simplicidad, se mostrará un mensaje en la consola y se eliminará el registro del array "rows"
-      console.log("Borrando registro con ID:", id);
-      this.rows = this.rows.filter(row => row.id !== id);
+      axios
+        .delete(`http://localhost:8000/api/v1/gimnasios/${id}`)
+        .then((response) => {
+          console.log(response.data.message);
+          this.fetchRows();
+        });
     },
     saveChanges() {
-      if (this.editingRow) {
-        // Aquí puedes realizar una petición a tu API para guardar los cambios del registro existente
-        // this.editingRow contiene los datos editados del formulario
-        console.log("Guardando cambios", this.editingRow);
+      if (this.editingRow._id) {
+        axios
+          .put(
+            `http://localhost:8000/api/v1/gimnasios/${this.editingRow._id}`,
+            this.editingRow
+          )
+          .then((response) => {
+            console.log(response.data.message);
+            this.fetchRows();
+          });
       } else {
-        // Aquí puedes realizar una petición a tu API para crear un nuevo registro
-        // this.editingRow contiene los datos del nuevo registro
-        console.log("Creando registro", this.editingRow);
+        axios
+          .post("http://localhost:8000/api/v1/gimnasios/", this.editingRow)
+          .then((response) => {
+            console.log(response.data.message);
+            this.fetchRows();
+          });
       }
       this.cancelEdit();
     },
@@ -144,11 +203,11 @@ export default {
     },
     createRow() {
       this.editingRow = {
-        id: "",
         nombre: "",
-        mail: "",
-        ubicacion: "",
-        capacidad: "",
+        geolocalizacion: "",
+        ruc: "",
+        aforo: "",
+        horarios_atencion: "",
       };
     },
   },
@@ -159,7 +218,7 @@ export default {
 /*
   Home Content
   */
-  .tab {
+.tab {
   margin-top: 90px;
   background-color: white;
 }
@@ -234,15 +293,15 @@ export default {
 .create-button {
   margin: 20px;
 }
-.butcreate{
+.butcreate {
   margin-left: 20px;
   margin-top: 10px;
 }
-.butinside{
+.butinside {
   margin-top: 15px;
   margin-right: 15px;
 }
-.buttab{
+.buttab {
   margin-right: 10px;
 }
 </style>

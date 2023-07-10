@@ -190,25 +190,21 @@
                 <tr>
                   <th>ID</th>
                   <th>NOMBRE</th>
-                  <th>MAIL</th>
-                  <th>UBICACIÓN</th>
-                  <th>CAPACIDAD</th>
+                  <th>GEOLOCALIZACIÓN</th>
+                  <th>RUC</th>
+                  <th>AFORO</th>
+                  <th>HORARIO DE ATENCIÓN</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>001</td>
-                  <td>Olimpo</td>
-                  <td>example@mail.com</td>
-                  <td>Arequipa...</td>
-                  <td>40</td>
-                </tr>
-                <tr>
-                  <td>002</td>
-                  <td>Smartfit</td>
-                  <td>example@mail.como</td>
-                  <td>Arequipa...</td>
-                  <td>45</td>
+                <tr v-for="row in rows" :key="row.id">
+                  <td>{{ row._id }}</td>
+                  <td>{{ row.nombre }}</td>
+                  <td>{{ row.geolocalizacion}}</td>
+                  <td>{{ row.ruc }}</td>
+                  <td>{{ row.aforo }}</td>
+                  <td>{{ row.horarios_atencion }}</td>
+
                 </tr>
               </tbody>
             </table>
@@ -257,11 +253,73 @@
 
 <script>
 import SidebarAdmin from "@/components/layout/sidebars/SidebarAdmin.vue";
+import axios from "axios";
 export default {
   components() {
     SidebarAdmin;
   },
   components: { SidebarAdmin },
+  data() {
+    return {
+      rows: [],
+      editingRow: null,
+    };
+  },
+  mounted() {
+    this.fetchRows();
+  },
+  methods: {
+    fetchRows() {
+      axios.get("http://localhost:8000/api/v1/gimnasios/").then((response) => {
+        this.rows = response.data.data;
+      });
+    },
+    editRow(id) {
+      const rowData = this.rows.find((row) => row._id === id);
+      this.editingRow = { ...rowData };
+    },
+    deleteRow(id) {
+      axios
+        .delete(`http://localhost:8000/api/v1/gimnasios/${id}`)
+        .then((response) => {
+          console.log(response.data.message);
+          this.fetchRows();
+        });
+    },
+    saveChanges() {
+      if (this.editingRow._id) {
+        axios
+          .put(
+            `http://localhost:8000/api/v1/gimnasios/${this.editingRow._id}`,
+            this.editingRow
+          )
+          .then((response) => {
+            console.log(response.data.message);
+            this.fetchRows();
+          });
+      } else {
+        axios
+          .post("http://localhost:8000/api/v1/gimnasios/", this.editingRow)
+          .then((response) => {
+            console.log(response.data.message);
+            this.fetchRows();
+          });
+      }
+      this.cancelEdit();
+    },
+    cancelEdit() {
+      this.editingRow = null;
+    },
+    createRow() {
+      this.editingRow = {
+        nombre: "",
+        geolocalizacion: "",
+        ruc: "",
+        aforo: "",
+        horarios_atencion: "",
+      };
+    },
+  },
   // components: { Bar },
   // props: {
   //   chartId: {
