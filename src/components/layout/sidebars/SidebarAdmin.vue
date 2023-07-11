@@ -75,7 +75,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content border-0">
                                 <div class="modal-body border-0" style="padding-top: 40px;">
-                                    ¿Seguro que dese?
+                                    ¿Seguro que desea salir?
                                 </div>
                                 <div class="modal-footer border-0">
                                     <button type="button" class="btn bcancel" data-bs-dismiss="modal">Cancelar</button>
