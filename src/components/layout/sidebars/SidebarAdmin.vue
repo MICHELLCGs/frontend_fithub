@@ -9,7 +9,7 @@
             <i class="bi bi-list" id="btn" @click="toggleSidebar"></i>
         </div>
         <ul class="nav_list">
-            <li> 
+            <li>
                 <a href="/homeadmin">
                     <i class="bi bi-grid"></i>
                     <span class="links_name"> Dashboard</span>
@@ -63,19 +63,19 @@
                         <div class="job">Administrador</div>
                     </div>
                 </div>
-                <a href="/" data-bs-toggle="modal"
+                <a href="/" 
                             data-bs-target="#staticBackdrop">
                 <i class="bi bi-box-arrow-left" id="log_out" style="color: white;"></i>
                 </a>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+    <!--<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content border-0">
                                 <div class="modal-body border-0" style="padding-top: 40px;">
-                                    ¿Seguro que desea salir? 
+                                    ¿Seguro que desea salir?
                                 </div>
                                 <div class="modal-footer border-0">
                                     <button type="button" class="btn bcancel" data-bs-dismiss="modal">Cancelar</button>
@@ -84,7 +84,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div> -->
 </template>
 <script>
 export default {
@@ -98,9 +98,9 @@ export default {
     toggleSidebar() {
       this.isSidebarOpen = !this.isSidebarOpen;
     },
-    acceptA() {
-      window.location.href = "/";
-    },
+    //acceptA() {
+      //window.location.href = "/";
+    //},
   },
 };
 </script>
@@ -108,4 +108,29 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Nunito:wght@500;700;800&family=Poppins:wght@300&display=swap");
 @import "@/assets/css/siderbar.css";
-</style>
+/* modal-botones
+.bcancel {
+    border: 1px solid #205080;
+    background-color: transparent;
+}
+
+.bcancel:hover {
+    background-color: #205080;
+    box-shadow: 0 4px 8px rgba(32, 80, 128, 0.5);
+    color: white;
+}
+
+.bcontinue {
+    background-color: #336699;
+    color: #fff;
+}
+
+.bcontinue.btn-selected {
+    background-color: #205080;
+}
+
+.bcontinue:hover {
+    box-shadow: 0 4px 8px rgba(32, 80, 128, 0.5);
+    color: white;
+}*/
+</style> 
