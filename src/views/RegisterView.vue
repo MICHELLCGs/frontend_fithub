@@ -167,7 +167,7 @@
             v-model="nombres"
               type="text"
               class="form-control form-control-lg bg-light fs-6"
-              placeholder="Nombres"
+              
             />
           </div>
           <span>Apellidos:</span>
@@ -176,7 +176,7 @@
             v-model="apellidos"
               type="text"
               class="form-control form-control-lg bg-light fs-6"
-              placeholder="Apellidos"
+              
             />
           </div>
         </div>
