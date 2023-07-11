@@ -133,4 +133,4 @@ export default {
     box-shadow: 0 4px 8px rgba(32, 80, 128, 0.5);
     color: white;
 }*/
-</style> 
+</style>
