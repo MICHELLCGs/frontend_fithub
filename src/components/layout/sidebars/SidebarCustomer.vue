@@ -65,14 +65,13 @@
             <div class="job">Gimnasio</div>
           </div>
         </div>
-        <a href="/" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
+        <a href="/">
         <i class="bi bi-box-arrow-left" id="log_out" style="color: white;"></i>
       </a>
       </div>
     </div>
   </div>
-
+<!--
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -87,7 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
   <div
         class="offcanvas offcanvas-end"
         tabindex="-1"
@@ -120,9 +119,9 @@ export default {
     toggleSidebar() {
       this.isSidebarOpen = !this.isSidebarOpen;
     },
-    acceptAc() {
-      window.location.href = "/";
-    },
+    //acceptAc() {
+      //window.location.href = "/";
+    //},
   },
 };
 </script>
@@ -186,4 +185,29 @@ body {
   padding-top: 1rem;
   padding-bottom: 0rem;
 }
+/* modal-botones
+.bcancel {
+    border: 1px solid #205080;
+    background-color: transparent;
+}
+
+.bcancel:hover {
+    background-color: #205080;
+    box-shadow: 0 4px 8px rgba(32, 80, 128, 0.5);
+    color: white;
+}
+
+.bcontinue {
+    background-color: #336699;
+    color: #fff;
+}
+
+.bcontinue.btn-selected {
+    background-color: #205080;
+}
+
+.bcontinue:hover {
+    box-shadow: 0 4px 8px rgba(32, 80, 128, 0.5);
+    color: white;
+}*/
 </style>

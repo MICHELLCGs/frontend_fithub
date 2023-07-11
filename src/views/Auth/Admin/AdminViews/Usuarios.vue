@@ -11,32 +11,29 @@
             <h1>Tabla Usuarios</h1>
             <div class="table-responsive">
               <table class="table table-bordered" style="margin-bottom: 100px">
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>NOMBRE</th>
-                    <th>APELLIDOS</th>
-                    <th>DNI</th>
-                    <th>MAIL</th>
-                    <th>ROL</th>
-                    <th>ACCIONES</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="row in rows" :key="row._id">
-                    <td>{{ row._id }}</td>
-                    <td>{{ row.name }}</td>
-                    <td>{{ row.lastname }}</td>
-                    <td>{{ row.dni }}</td>
-                    <td>{{ row.email }}</td>
-                    <td>{{ row.role }}</td>
-                    <td>
-                      <button class="btn btn-success buttab" @click="editRow(row._id)">Editar</button>
-                      <button class="btn btn-danger buttab" @click="deleteRow(row._id)">Borrar</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NOMBRE</th>
+      <th>APELLIDOS</th>
+      <th>DNI</th>
+      <th>MAIL</th>
+      <th>ROL</th>
+      <th>ACCIONES</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="row in rows1" :key="row._id">
+      <td>{{ row._id }}</td>
+      <td>{{ row.name }}</td>
+      <td>{{ row.lastname }}</td>
+      <td>{{ row.dni }}</td>
+      <td>{{ row.email }}</td>
+      <td>{{ row.role }}</td>
+    </tr>
+  </tbody>
+</table>
+
             </div>
           </div>
         </div>
@@ -157,6 +154,63 @@ export default {
       };
     },
   },
+  data() {
+    return {
+      rows1: [],
+      editingRow: null,
+    };
+  },
+  mounted() {
+    this.fetchRows();
+  },
+  methods: {
+    fetchRows() {
+      axios.get("https://api.fithub.bjrcode.com/api/v1/users").then((response) => {
+        this.rows1 = response.data;
+      });
+    },
+    editRow(id) {
+      const rowData = this.rows1.find((row) => row._id === id);
+      this.editingRow = { ...rowData };
+    },
+    deleteRow(id) {
+      axios.delete(`https://api.fithub.bjrcode.com/api/v1/users/${id}`).then((response) => {
+        console.log(response.data.message);
+        this.fetchRows();
+      });
+    },
+    saveChanges() {
+      if (this.editingRow._id) {
+        axios
+          .put(`https://api.fithub.bjrcode.com/api/v1/users/${this.editingRow._id}`, this.editingRow)
+          .then((response) => {
+            console.log(response.data.message);
+            this.fetchRows();
+          });
+      } else {
+        axios
+          .post("https://api.fithub.bjrcode.com/api/v1/users", this.editingRow)
+          .then((response) => {
+            console.log(response.data.message);
+            this.fetchRows();
+          });
+      }
+      this.cancelEdit();
+    },
+    cancelEdit() {
+      this.editingRow = null;
+    },
+    createRow() {
+      this.editingRow = {
+        name: "",
+        lastname: "",
+        dni: "",
+        email: "",
+        role: "",
+      };
+    },
+  },
+
 };
 </script>
 
