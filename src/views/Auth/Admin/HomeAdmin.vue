@@ -43,7 +43,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">ETC</div>
+            <div class="modal-body">Vacio</div>
             <div class="modal-footer">
               <button
                 type="button"
@@ -57,7 +57,7 @@
         </div>
       </div>
     </nav>
-    <div class="row mt-3">
+    <!-- <div class="row mt-3">
       <div class="col-md-6 offset-3">
         <div class="card border border-dark">
           <div class="card-header bg-dark"></div>
@@ -66,16 +66,16 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="row1-container">
-      <div class="box box-down cyan">
+      <!-- <div class="box box-down cyan">
         <h2></h2>
         <p>Ingresos</p>
         <img
           src="https://assets.codepen.io/2301174/icon-calculator.svg"
           alt=""
         />
-      </div>
+      </div> -->
 
       <!-- <div class="box red">
       <h2></h2>
@@ -83,7 +83,7 @@
       <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
     </div> -->
 
-      <div class="box box-down red">
+      <!-- <div class="box box-down red">
         <h2></h2>
         <p>Ingresos</p>
         <img
@@ -98,7 +98,7 @@
           src="https://assets.codepen.io/2301174/icon-calculator.svg"
           alt=""
         />
-      </div>
+      </div> -->
     </div>
 
     <!-- <div class="row2-container">
@@ -113,33 +113,33 @@
         <div class="col-12">
           <h1>Tabla Usuarios</h1>
           <div class="table-responsive">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>NOMBRE</th>
-                  <th>APELLIDOS</th>
-                  <th>DNI</th>
-                  <th>MAIL</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Lucas</td>
-                  <td>Castillo</td>
-                  <td>45368729</td>
-                  <td>example@mail.com</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Martha</td>
-                  <td>Olivares</td>
-                  <td>65372897</td>
-                  <td>example@mail.com</td>
-                </tr>
-              </tbody>
-            </table>
+            <table class="table table-bordered" style="margin-bottom: 100px">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDOS</th>
+                    <th>DNI</th>
+                    <th>MAIL</th>
+                    <th>ROL</th>
+                    <th>ACCIONES</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="row in rows" :key="row._id">
+                    <td>{{ row._id }}</td>
+                    <td>{{ row.name }}</td>
+                    <td>{{ row.lastname }}</td>
+                    <td>{{ row.dni }}</td>
+                    <td>{{ row.email }}</td>
+                    <td>{{ row.role }}</td>
+                    <td>
+                      <button class="btn btn-success buttab" @click="editRow(row._id)">Editar</button>
+                      <button class="btn btn-danger buttab" @click="deleteRow(row._id)">Borrar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
           </div>
         </div>
       </div>
@@ -200,11 +200,10 @@
                 <tr v-for="row in rows" :key="row.id">
                   <td>{{ row._id }}</td>
                   <td>{{ row.nombre }}</td>
-                  <td>{{ row.geolocalizacion}}</td>
+                  <td>{{ row.geolocalizacion }}</td>
                   <td>{{ row.ruc }}</td>
                   <td>{{ row.aforo }}</td>
                   <td>{{ row.horarios_atencion }}</td>
-
                 </tr>
               </tbody>
             </table>

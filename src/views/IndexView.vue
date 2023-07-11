@@ -271,7 +271,7 @@ export default {
   },
   methods: {
     fetchPlan() {
-      axios.get('http://localhost:8000/api/v1/planes')
+      axios.get('https://api.fithub.bjrcode.com/api/v1/planes')
         .then(response => {
           if (response.data.data.length > 0) {
             this.plan = response.data.data[0];

@@ -15,8 +15,8 @@
         </div>
         <div class="col-md-6">
           <div class="profile-head">
-            <h5>María de los Ángeles Corrales</h5>
-            <h6>Aministradora</h6>
+            <h5>kael Wilson Dexx Maxell</h5>
+            <h6>Usuario</h6>
             <p class="proile-rating">RANKINGS : <span>8/10</span></p>
             <ul class="nav nav-tabs" id="myTab" role="tablist">
               <li class="nav-item">
@@ -34,18 +34,18 @@
       </div>
       <div class="row">
         <div class="col-md-4">
-          <div class="profile-work">
+          <!--<div class="profile-work">
             <p>Link de trabajo</p>
             <a href="">Website Link</a><br/>
-            <!-- <a href="">Bootsnipp Profile</a><br/>
-            <a href="">Bootply Profile</a> -->
+            <a href="">Bootsnipp Profile</a><br/>
+            <a href="">Bootply Profile</a>
             <p>Habilidades</p>
             <a href="">Diseñadora web</a><br/>
             <a href="">Desarrolladora web</a><br/>
             <a href="">WordPress</a><br/>
             <a href="">WooCommerce</a><br/>
             <a href="">PHP, Net</a><br/>
-          </div>
+          </div>-->
         </div>
         <div class="col-md-8">
           <div class="tab-content profile-tab" id="myTabContent">
@@ -55,7 +55,7 @@
                   <label>User Id</label>
                 </div>
                 <div class="col-md-6">
-                  <p>MariaAC</p>
+                  <p>kael</p>
                 </div>
               </div>
               <div class="row">
@@ -63,7 +63,7 @@
                   <label>Name</label>
                 </div>
                 <div class="col-md-6">
-                  <p>María de los Ángeles Corrales</p>
+                  <p>kael Wilson Dexx Maxell</p>
                 </div>
               </div>
               <div class="row">
@@ -71,15 +71,15 @@
                   <label>Email</label>
                 </div>
                 <div class="col-md-6">
-                  <p>MariaAC@gmail.com</p>
+                  <p>kael@fithub.com</p>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6">
-                  <label>Número</label>
+                  <label>DNI</label>
                 </div>
                 <div class="col-md-6">
-                  <p>934672834</p>
+                  <p>76145178</p>
                 </div>
               </div>
               <div class="row">

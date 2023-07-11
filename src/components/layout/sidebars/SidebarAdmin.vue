@@ -63,10 +63,28 @@
                         <div class="job">Administrador</div>
                     </div>
                 </div>
-                <i class="bi bi-box-arrow-left" id="log_out"></i>
+                <a href="/" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">
+                <i class="bi bi-box-arrow-left" id="log_out" style="color: white;"></i>
+                </a>
             </div>
         </div>
     </div>
+    <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content border-0">
+                                <div class="modal-body border-0" style="padding-top: 40px;">
+                                    ¿Seguro que dese?
+                                </div>
+                                <div class="modal-footer border-0">
+                                    <button type="button" class="btn bcancel" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn bcontinue btn-selected"
+                                        @click="acceptA">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
 </template>
 <script>
 export default {
@@ -79,6 +97,9 @@ export default {
   methods: {
     toggleSidebar() {
       this.isSidebarOpen = !this.isSidebarOpen;
+    },
+    acceptA() {
+      window.location.href = "/";
     },
   },
 };

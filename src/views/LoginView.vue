@@ -109,7 +109,6 @@
 
 <script>
 import HeaderComp from "@/components/layout/headers/HeaderComp.vue";
-import axios from 'axios';
 
 export default {
   data() {
@@ -120,32 +119,16 @@ export default {
   },
   methods: {
     handleLogin() {
-      const userData = {
-        email: this.email,
-        password: this.password
-      };
-
-      axios.post('https://api.fithub.bjrcode.com/api/login', userData)
-        .then(response => {
-          const { token, message } = response.data;
-
-          if (message === 'Success') {
-            // Verificar el rol del usuario
-            if (userData.email === 'admin@example.com') {
-              // Redireccionar a la página de administrador (homadmin)
-              this.$router.push('/homadmin');
-            } else {
-              // Redireccionar a la página de cliente (customeradmin)
-              this.$router.push('/customeradmin');
-            }
-          } else {
-            // Mostrar mensaje de error o tomar otra acción en caso de autenticación fallida
-          }
-        })
-        .catch(error => {
-          // Manejar errores de la solicitud
-          console.error(error);
-        });
+      if (this.email === 'admin@fithub.com' && this.password === 'password123') {
+        // Redireccionar a la página de administrador (homeadmin)
+        this.$router.push('/homeadmin');
+      } else if (this.email === 'customer@fithub.com' && this.password === 'password134') {
+        // Redireccionar a la página de cliente (homecustomer)
+        this.$router.push('/homecustomer');
+      } else {
+        // Mostrar mensaje de error o tomar otra acción en caso de autenticación fallida
+        alert('Credenciales incorrectas');
+      }
     },
   },
   components: {

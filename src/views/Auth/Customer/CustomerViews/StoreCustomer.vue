@@ -4,14 +4,14 @@
       <div class="card w-50 mx-auto">
         <div class="card-body">
           <i class="bi bi-lightning-charge-fill custom-icon"></i>
-          <h5 class="card-title" style="font-size: 24px">FitPlan</h5>
+          <h5 class="card-title" style="font-size: 24px">{{ plan.name }}</h5>
           <p class="card-text" style="font-size: 16px">
             Brindamos un plan basado en la comodidad de nuestra comunidad. 
           </p>
           <div class="price">
-            <h4><sup> S/. </sup> 89.99</h4>
+            <h4><sup> S/. </sup>{{ plan.preci }}</h4>
           </div>
-          <a href="#" class="btn custom-button">Comprar</a>
+          <a href="/compra" class="btn custom-button" >Comprar</a>
         </div>
       </div>
     </div>
@@ -20,11 +20,34 @@
   
   <script>
   import SidebarCustomer from "@/components/layout/sidebars/SidebarCustomer.vue";
+  import axios from 'axios';
   export default {
     components() {
       SidebarCustomer;
     },
     components: { SidebarCustomer },
+    data() {
+    return {
+      plan: {},
+    };
+  },
+  mounted() {
+    this.fetchPlan();
+  },
+  methods: {
+    fetchPlan() {
+      axios.get('https://api.fithub.bjrcode.com/api/v1/planes')
+        .then(response => {
+          if (response.data.data.length > 0) {
+            this.plan = response.data.data[0];
+          }
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    },
+  },
+
   };
   </script>
   
