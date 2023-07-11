@@ -67,7 +67,7 @@
         </div>
         <a href="/" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop">
-        <i class="bi bi-box-arrow-left" id="log_out"></i>
+        <i class="bi bi-box-arrow-left" id="log_out" style="color: white;"></i>
       </a>
       </div>
     </div>
@@ -83,7 +83,7 @@
                                 <div class="modal-footer border-0">
                                     <button type="button" class="btn bcancel" data-bs-dismiss="modal">Cancelar</button>
                                     <button type="button" class="btn bcontinue btn-selected"
-                                        @click="acceptA">Aceptar</button>
+                                        @click="acceptAct">Aceptar</button>
                                 </div>
                             </div>
                         </div>
@@ -119,6 +119,9 @@ export default {
   methods: {
     toggleSidebar() {
       this.isSidebarOpen = !this.isSidebarOpen;
+    },
+    acceptAc() {
+      window.location.href = "/";
     },
   },
 };

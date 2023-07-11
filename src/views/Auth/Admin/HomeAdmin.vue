@@ -122,7 +122,6 @@
                     <th>DNI</th>
                     <th>MAIL</th>
                     <th>ROL</th>
-                    <th>ACCIONES</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -133,10 +132,6 @@
                     <td>{{ row.dni }}</td>
                     <td>{{ row.email }}</td>
                     <td>{{ row.role }}</td>
-                    <td>
-                      <button class="btn btn-success buttab" @click="editRow(row._id)">Editar</button>
-                      <button class="btn btn-danger buttab" @click="deleteRow(row._id)">Borrar</button>
-                    </td>
                   </tr>
                 </tbody>
               </table>
