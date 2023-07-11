@@ -69,35 +69,35 @@ export default {
   components: {
     SidebarAdminGym,
     HeaderAdminGym,
-    Bar,
+    // Bar,
   },
-  props: {
-    chartId: {
-      type: String,
-      default: 'bar-chart'
-    }
-  },
-  data() {
-    return {
-      etiquetas: [], valores: [], chartData: [],
-      CharOptions: {
-        responsive: true
-      }
-    }
-  },
-  async mounted() {
-    const totales = await axios.get('api');
-    totales.data.map((row) => (
-      this.etiquetas.push(row.producto),
-      thhis.valores.push(row.total)
-    ))
-    this.chartData = {
-      labels: this.etiquetas,
-      datasets: [
-        { label: 'Productos', data: this.valores, backgroundColor: 'black' }
-      ]
-    }
-  },
+  // props: {
+  //   chartId: {
+  //     type: String,
+  //     default: 'bar-chart'
+  //   }
+  // },
+  // data() {
+  //   return {
+  //     etiquetas: [], valores: [], chartData: [],
+  //     CharOptions: {
+  //       responsive: true
+  //     }
+  //   }
+  // },
+  // async mounted() {
+  //   const totales = await axios.get('api');
+  //   totales.data.map((row) => (
+  //     this.etiquetas.push(row.producto),
+  //     thhis.valores.push(row.total)
+  //   ))
+  //   this.chartData = {
+  //     labels: this.etiquetas,
+  //     datasets: [
+  //       { label: 'Productos', data: this.valores, backgroundColor: 'black' }
+  //     ]
+  //   }
+  // },
   data() {
     return {
       rows: [
@@ -123,6 +123,13 @@ export default {
 </script>
 
 <style>
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
 .home_content {
   position: absolute;
   height: 100%;

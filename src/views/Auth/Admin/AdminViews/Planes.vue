@@ -251,7 +251,7 @@ export default {
   },
   methods: {
     fetchRows() {
-      axios.get("http://localhost:8000/api/v1/planes/").then((response) => {
+      axios.get("https://api.fithub.bjrcode.com/api/v1/planes/").then((response) => {
         this.rows = response.data.data;
       });
     },
@@ -260,7 +260,7 @@ export default {
       this.editingRow = { ...rowData };
     },
     deleteRow(id) {
-      axios.delete(`http://localhost:8000/api/v1/planes/${id}`).then((response) => {
+      axios.delete(`https://api.fithub.bjrcode.com/api/v1/planes/${id}`).then((response) => {
         console.log(response.data.message);
         this.fetchRows();
       });
@@ -268,14 +268,14 @@ export default {
     saveChanges() {
       if (this.editingRow._id) {
         axios
-          .put(`http://localhost:8000/api/v1/planes/${this.editingRow._id}`, this.editingRow)
+          .put(`https://api.fithub.bjrcode.com/api/v1/planes/${this.editingRow._id}`, this.editingRow)
           .then((response) => {
             console.log(response.data.message);
             this.fetchRows();
           });
       } else {
         axios
-          .post("http://localhost:8000/api/v1/planes/", this.editingRow)
+          .post("https://api.fithub.bjrcode.com/api/v1/planes/", this.editingRow)
           .then((response) => {
             console.log(response.data.message);
             this.fetchRows();

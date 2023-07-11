@@ -184,6 +184,13 @@ export default {
 </script>
   
 <style>
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+}
 .home_content {
     position: absolute;
     height: 100%;

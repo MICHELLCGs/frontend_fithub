@@ -237,12 +237,18 @@ export default {
         const data = await response.json();
 
         // Verificamos si la respuesta fue exitosa y tiene los datos requeridos
-        if (response.ok && data.success) {
-          this.resultado = {
-            apellidoPaterno: data.apellidoPaterno,
-            apellidoMaterno: data.apellidoMaterno,
-            nombres: data.nombres,
-          };
+          if (response.ok && data.success) {
+          // Realiza la solicitud POST a tu API REST para registrar el usuario
+          const registerResponse = await axios.post("https://api.fithub.bjrcode.com/api/register", {
+            name: this.resultado.nombres,
+            lastname: this.resultado.apellidoPaterno + " " + this.resultado.apellidoMaterno,
+            email: this.email,
+            dni: this.numeroDNI,
+            role: "user", // Asegúrate de proporcionar el rol adecuado
+            password: "contraseña" // Agrega la contraseña adecuada
+          });
+
+          console.log(registerResponse.data);
         } else {
           console.error('No se pudo obtener la información del DNI');
         }

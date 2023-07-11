@@ -161,7 +161,7 @@ export default {
   },
   methods: {
     fetchRows() {
-      axios.get("http://localhost:8000/api/v1/gimnasios/").then((response) => {
+      axios.get("https://api.fithub.bjrcode.com/api/v1/gimnasios/").then((response) => {
         this.rows = response.data.data;
       });
     },
@@ -171,7 +171,7 @@ export default {
     },
     deleteRow(id) {
       axios
-        .delete(`http://localhost:8000/api/v1/gimnasios/${id}`)
+        .delete(`https://api.fithub.bjrcode.com/api/v1/gimnasios/${id}`)
         .then((response) => {
           console.log(response.data.message);
           this.fetchRows();
@@ -181,7 +181,7 @@ export default {
       if (this.editingRow._id) {
         axios
           .put(
-            `http://localhost:8000/api/v1/gimnasios/${this.editingRow._id}`,
+            `https://api.fithub.bjrcode.com/api/v1/gimnasios/${this.editingRow._id}`,
             this.editingRow
           )
           .then((response) => {
@@ -190,7 +190,7 @@ export default {
           });
       } else {
         axios
-          .post("http://localhost:8000/api/v1/gimnasios/", this.editingRow)
+          .post("https://api.fithub.bjrcode.com/api/v1/gimnasios/", this.editingRow)
           .then((response) => {
             console.log(response.data.message);
             this.fetchRows();
