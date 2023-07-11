@@ -133,4 +133,8 @@ export default {
     box-shadow: 0 4px 8px rgba(32, 80, 128, 0.5);
     color: white;
 }*/
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> f3ca8c31c2e184c9f7349a58d60d53ae179932bd
