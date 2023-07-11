@@ -76,6 +76,10 @@
                   <label for="rol">Rol</label>
                   <input type="text" class="form-control" id="rol" v-model="editingRow.role">
                 </div>
+                <div class="form-group">
+                  <label for="password">Contraseña</label>
+                  <input type="password" class="form-control" id="password" v-model="editingRow.password">
+                </div>
                 <button type="submit" class="btn btn-primary butinside">{{ editingRow ? 'Guardar Cambios' : 'Crear' }}</button>
                 <button type="button" class="btn btn-secondary butinside" @click="cancelEdit">Cancelar</button>
               </form>
@@ -83,7 +87,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -109,8 +112,8 @@ export default {
   },
   methods: {
     fetchRows() {
-      axios.get("https://api.fithub.bjrcode.com/api/register").then((response) => {
-        this.rows = response.data.data;
+      axios.get("https://api.fithub.bjrcode.com/api/v1/users").then((response) => {
+        this.rows = response.data;
       });
     },
     editRow(id) {
@@ -118,7 +121,7 @@ export default {
       this.editingRow = { ...rowData };
     },
     deleteRow(id) {
-      axios.delete(`https://api.fithub.bjrcode.com/api/register${id}`).then((response) => {
+      axios.delete(`https://api.fithub.bjrcode.com/api/v1/users/${id}`).then((response) => {
         console.log(response.data.message);
         this.fetchRows();
       });
@@ -126,14 +129,14 @@ export default {
     saveChanges() {
       if (this.editingRow._id) {
         axios
-          .put(`https://api.fithub.bjrcode.com/api/register${this.editingRow._id}`, this.editingRow)
+          .put(`https://api.fithub.bjrcode.com/api/v1/users/${this.editingRow._id}`, this.editingRow)
           .then((response) => {
             console.log(response.data.message);
             this.fetchRows();
           });
       } else {
         axios
-          .post("https://api.fithub.bjrcode.com/api/register", this.editingRow)
+          .post("https://api.fithub.bjrcode.com/api/v1/users", this.editingRow)
           .then((response) => {
             console.log(response.data.message);
             this.fetchRows();
