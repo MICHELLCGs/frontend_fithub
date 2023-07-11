@@ -12,7 +12,7 @@
   <div
     class="container d-flex justify-content-center align-items-center min-vh-100 bloq"
   >
-    <div class="row border rounded-5 p-3 bg-white shadow box-area ">
+    <div class="row border rounded-5 p-3 bg-white shadow box-area">
       <div
         class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
         style="background: #89bbcb"
@@ -74,6 +74,7 @@
           </div>
           <div class="input-group mb-3">
             <input
+            v-model="contraseña"
               type="password"
               class="form-control form-control-lg bg-light fs-6"
               placeholder="Contraseña"
@@ -163,19 +164,19 @@
           <span>Nombres:</span>
           <div class="input-group mb-3">
             <input
+            v-model="nombres"
               type="text"
               class="form-control form-control-lg bg-light fs-6"
-              :placeholder="nombrePlaceholder"
-              disabled
+              placeholder="Nombres"
             />
           </div>
           <span>Apellidos:</span>
           <div class="input-group mb-3">
             <input
+            v-model="apellidos"
               type="text"
               class="form-control form-control-lg bg-light fs-6"
-              :placeholder="apellidosPlaceholder"
-              disabled
+              placeholder="Apellidos"
             />
           </div>
         </div>
@@ -187,7 +188,9 @@
           >
             Cerrar
           </button>
-          <button type="button" class="btn btn-dark">Registrar</button>
+          <button @click="submitForm" type="button" class="btn btn-dark">
+            Registrar
+          </button>
         </div>
       </div>
     </div>
@@ -196,16 +199,21 @@
 
 <script>
 import { ref } from "vue";
+import axios from "axios";
 import HeaderComp from "@/components/layout/headers/HeaderComp.vue";
+
 export default {
-  components() {
-    HeaderComp;
+  components: {
+    HeaderComp,
   },
-  components: { HeaderComp },
   data() {
     return {
       email: "",
       numeroDNI: "",
+      contraseña:"",
+      nombres:"",
+      apellidos:"",
+      resultado: null, // Agrega una propiedad para almacenar el resultado
     };
   },
   computed: {
@@ -215,50 +223,35 @@ export default {
     dniPlaceholder() {
       return this.numeroDNI;
     },
-    nombrePlaceholder(){
-        if (this.resultado) {
-        return this.resultado.nombres;
-      } else {
-        return '';
-      }
-    },
-    apellidosPlaceholder(){
-        if (this.resultado) {
-        return `${this.resultado.apellidoPaterno} ${this.resultado.apellidoMaterno}`;
-      } else {
-        return '';
-      }
-    }
   },
   methods: {
-    async consultarAPI() {
-      try {
-        const response = await fetch(`https://api.apis.net.pe/v1/dni?numero=${this.numeroDNI}`);
-        const data = await response.json();
+    submitForm() {
+      const url = "https://api.fithub.bjrcode.com/api/register"; // URL del API
 
-        // Verificamos si la respuesta fue exitosa y tiene los datos requeridos
-          if (response.ok && data.success) {
-          // Realiza la solicitud POST a tu API REST para registrar el usuario
-          const registerResponse = await axios.post("https://api.fithub.bjrcode.com/api/v1/pla/api/register", {
-            name: this.resultado.nombres,
-            lastname: this.resultado.apellidoPaterno + " " + this.resultado.apellidoMaterno,
-            email: this,
-            dni: this.numeroDNI,
-            role: "user", // Asegúrate de proporcionar el rol adecuado
-            password: "contraseña" // Agrega la contraseña adecuada
-          });
+      const data = {
+        name: this.nombres, // Obtén el valor del campo de nombres desde los datos de Vue.js
+        lastname: this.apellidos, // Obtén el valor del campo de apellidos desde los datos de Vue.js
+        email: this.email, // Obtén el valor del campo de correo electrónico desde los datos de Vue.js
+        dni: this.numeroDNI, // Obtén el valor del campo de DNI desde los datos de Vue.js
+        role: "customer", // Asigna el rol según sea necesario (en este caso, 'admin','customer,'partner')
+        password: this.contraseña, // Asigna la contraseña según sea necesario
+      };
 
-          console.log(registerResponse.data);
-        } else {
-          console.error('No se pudo obtener la información del DNI');
-        }
-      } catch (error) {
-        console.error('Ocurrió un error al hacer la solicitud:', error);
-      }
+      axios
+        .post(url, data)
+        .then((response) => {
+          // La solicitud se realizó con éxito
+          console.log(response.data); // Puedes hacer algo con la respuesta del servidor aquí
+        })
+        .catch((error) => {
+          // Hubo un error en la solicitud
+          console.error(error);
+        });
     },
   },
 };
 </script>
+
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
@@ -270,7 +263,7 @@ body {
 .box-area {
   width: 930px;
 }
-.bloq{
+.bloq {
   margin-top: 35px;
 }
 .right-box {
