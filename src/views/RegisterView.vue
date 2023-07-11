@@ -239,10 +239,10 @@ export default {
         // Verificamos si la respuesta fue exitosa y tiene los datos requeridos
           if (response.ok && data.success) {
           // Realiza la solicitud POST a tu API REST para registrar el usuario
-          const registerResponse = await axios.post("https://api.fithub.bjrcode.com/api/register", {
+          const registerResponse = await axios.post("https://api.fithub.bjrcode.com/api/v1/pla/api/register", {
             name: this.resultado.nombres,
             lastname: this.resultado.apellidoPaterno + " " + this.resultado.apellidoMaterno,
-            email: this.email,
+            email: this,
             dni: this.numeroDNI,
             role: "user", // Asegúrate de proporcionar el rol adecuado
             password: "contraseña" // Agrega la contraseña adecuada
