@@ -9,7 +9,7 @@
             <i class="bi bi-list" id="btn" @click="toggleSidebar"></i>
         </div>
         <ul class="nav_list">
-            <li>
+            <li> 
                 <a href="/homeadmin">
                     <i class="bi bi-grid"></i>
                     <span class="links_name"> Dashboard</span>
