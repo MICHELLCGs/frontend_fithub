@@ -1,11 +1,11 @@
 <template>
-    <div class="p-4 p-md-5 mb-4 text-bg-dark alinear">
-        <div class="col-md-6 px-0">
+<div class="p-4 p-md-5 mb-4 text-bg-dark alinear fondo-con-imagen">
+        <div class="col-md-6 px-0" style="color: rgb(48, 45, 45);">
             <h1 class="display-4">¡Aumenta tus ganancias y amplía tu alcance con FitHub!</h1>
-            <p class="lead my-3">Forma parte de nuestra red de partners y beneficite de una mayor visibilidad y un
+            <p class="lead my-3">Forma parte de nuestra red de partners y benefíciate de una mayor visibilidad y un
                 incremento en tu base de clientes.</p>
             <p class="lead mb-0">
-                <a href="#" class="custom-button">¡Sé nuestro partner hoy!</a>
+                <a href="/partnersregis" class="custom-button">¡Sé nuestro partner hoy!</a>
             </p>
         </div>
     </div>
@@ -151,6 +151,13 @@
 </script>
 
 <style>
+.fondo-con-imagen {
+    background-image: url('@/assets/img/part.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
 .alinear {
     display: flex;
     align-items: center;

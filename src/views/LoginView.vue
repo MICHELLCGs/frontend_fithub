@@ -54,6 +54,7 @@
               type="text"
               class="form-control form-control-lg bg-light fs-6"
               placeholder="Email"
+              v-model="email"
             />
           </div>
           <div class="input-group mb-1">
@@ -61,6 +62,7 @@
               type="password"
               class="form-control form-control-lg bg-light fs-6"
               placeholder="Contraseña"
+              v-model="password"
             />
           </div>
           <div class="input-group mb-5 d-flex justify-content-between">
@@ -79,7 +81,7 @@
             </div>
           </div>
           <div ref="/homecustomer" class="input-group mb-3">
-            <button class="btn btn-lg btn-dark w-100 fs-6" @click="login">Login</button>
+            <button class="btn btn-lg btn-dark w-100 fs-6" @click="handleLogin">Login</button>
           </div>
           <div class="input-group mb-3">
             <!-- <button class="btn btn-lg btn-light w-100 fs-6">
@@ -104,43 +106,55 @@
     </div>
   </div>
 </template>
+
 <script>
 import HeaderComp from "@/components/layout/headers/HeaderComp.vue";
-import axios from "axios";
+import axios from 'axios';
 
 export default {
-  components: {
-    HeaderComp,
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
   },
   methods: {
-    login() {
-      const email = "admin@fithub.com"; // Correo electrónico del usuario
-      const password = "password123"; // Contraseña del usuario
+    handleLogin() {
+      const userData = {
+        email: this.email,
+        password: this.password
+      };
 
-      axios
-        .post("https://api.fithub.bjrcode.com/api/login", { email, password })
-        .then((response) => {
-          const token = response.data.token;
-          const role = response.data.role;
+      axios.post('https://api.fithub.bjrcode.com/api/login', userData)
+        .then(response => {
+          const { token, message } = response.data;
 
-          if (role === "admin") {
-            // Redirigir al home del administrador
-            this.$router.push("/homeadmin");
-          } else if (role === "customer") {
-            // Redirigir al home del cliente
-            this.$router.push("/homecustomer");
+          if (message === 'Success') {
+            // Verificar el rol del usuario
+            if (userData.email === 'admin@example.com') {
+              // Redireccionar a la página de administrador (homadmin)
+              this.$router.push('/homadmin');
+            } else {
+              // Redireccionar a la página de cliente (customeradmin)
+              this.$router.push('/customeradmin');
+            }
           } else {
-            // Rol desconocido, mostrar mensaje de error o redirigir a una página de error
+            // Mostrar mensaje de error o tomar otra acción en caso de autenticación fallida
           }
         })
-        .catch((error) => {
-          // Manejar el error de autenticación
+        .catch(error => {
+          // Manejar errores de la solicitud
+          console.error(error);
         });
     },
   },
+  components: {
+    HeaderComp,
+  },
 };
 </script>
-  <style>
+
+<style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
 body {
@@ -179,4 +193,3 @@ body {
   }
 }
 </style>
-  
