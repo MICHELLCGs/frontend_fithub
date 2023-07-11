@@ -78,8 +78,8 @@
               >
             </div>
           </div>
-          <div ref="/home" class="input-group mb-3">
-            <button class="btn btn-lg btn-dark w-100 fs-6">Login</button>
+          <div ref="/homecustomer" class="input-group mb-3">
+            <button class="btn btn-lg btn-dark w-100 fs-6" @click="login">Login</button>
           </div>
           <div class="input-group mb-3">
             <!-- <button class="btn btn-lg btn-light w-100 fs-6">
@@ -104,13 +104,40 @@
     </div>
   </div>
 </template>
-  <script>
+<script>
 import HeaderComp from "@/components/layout/headers/HeaderComp.vue";
+import axios from "axios";
+
 export default {
-  components() {
-    HeaderComp;
+  components: {
+    HeaderComp,
   },
-  components: { HeaderComp },
+  methods: {
+    login() {
+      const email = "admin@fithub.com"; // Correo electrónico del usuario
+      const password = "password123"; // Contraseña del usuario
+
+      axios
+        .post("https://api.fithub.bjrcode.com/api/login", { email, password })
+        .then((response) => {
+          const token = response.data.token;
+          const role = response.data.role;
+
+          if (role === "admin") {
+            // Redirigir al home del administrador
+            this.$router.push("/homeadmin");
+          } else if (role === "customer") {
+            // Redirigir al home del cliente
+            this.$router.push("/homecustomer");
+          } else {
+            // Rol desconocido, mostrar mensaje de error o redirigir a una página de error
+          }
+        })
+        .catch((error) => {
+          // Manejar el error de autenticación
+        });
+    },
+  },
 };
 </script>
   <style>
