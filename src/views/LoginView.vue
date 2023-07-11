@@ -113,6 +113,7 @@ import HeaderComp from "@/components/layout/headers/HeaderComp.vue";
 export default {
   data() {
     return {
+
       email: '',
       password: '',
     };
