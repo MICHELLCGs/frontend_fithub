@@ -119,10 +119,10 @@ export default {
   },
   methods: {
     handleLogin() {
-      if (this.email === 'admin@fithub.com' && this.password === 'password123') {
+      if (this.email === 'admin@fithub.com' && this.password === 'password') {
         // Redireccionar a la página de administrador (homeadmin)
         this.$router.push('/homeadmin');
-      } else if (this.email === 'customer@fithub.com' && this.password === 'password134') {
+      } else if (this.email === 'customer@fithub.com' && this.password === 'password') {
         // Redireccionar a la página de cliente (homecustomer)
         this.$router.push('/homecustomer');
       } else {
